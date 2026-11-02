@@ -1707,3 +1707,26 @@ html {
     font-size: 12px;
   }
 }
+.offer-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 24px;
+  background: #ebc458;
+  color: #171a20;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.5;
+}
+.offer-banner strong {
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .offer-banner {
+    flex-direction: column;
+    gap: 3px;
+    padding: 11px 18px;
+    font-size: 12px;
+  }
+}

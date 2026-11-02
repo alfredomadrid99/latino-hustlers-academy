@@ -152,8 +152,8 @@
       {
         "id": "inversion",
         "title": "Conocé la inversión propuesta.",
-        "monthly_price": "₡34.900 mensuales",
-        "enrollment_fee": "Matrícula única de ₡19.000",
+        "monthly_price": "₡25.000 mensuales",
+        "enrollment_fee": "Matrícula única de ₡10.000",
         "status": "Programa en evaluación de apertura",
         "note": "Registrá tu interés para recibir información sobre las condiciones, fechas y horarios si avanzamos con el lanzamiento.",
         "instruction": "No inventar duración total ni calcular el costo completo sin conocer la cantidad de meses."
@@ -174,7 +174,7 @@
       },
       {
         "question": "¿Cuánto costaría?",
-        "answer": "Estamos evaluando una mensualidad de ₡34.900 y una matrícula única de ₡19.000. Las condiciones finales se confirmarán antes de la inscripción."
+        "answer": "La oferta para los primeros 50 estudiantes es de ₡25.000 mensuales y una matrícula única de ₡10.000. Las condiciones finales se confirmarán antes de la inscripción."
       },
       {
         "question": "¿Ya está confirmada la apertura en Pérez Zeledón?",
@@ -302,8 +302,8 @@
       "id": "inversion",
       "title": "Una propuesta para desarrollar tu siguiente etapa profesional.",
       "duration": "5 meses",
-      "monthly_price": "₡39.000 mensuales",
-      "enrollment_fee": "Matrícula única de ₡20.000",
+      "monthly_price": "₡25.000 mensuales",
+      "enrollment_fee": "Matrícula única de ₡10.000",
       "status": "Programa en evaluación de apertura",
       "note": "La propuesta corresponde a formación en carreras remotas. No incluye automáticamente el programa de inglés."
     },
@@ -326,7 +326,7 @@
       },
       {
         "question": "¿Cuánto dura y cuál sería la inversión?",
-        "answer": "La propuesta contempla 5 meses, con una mensualidad de ₡39.000 y una matrícula única de ₡20.000. Las condiciones finales se confirmarán antes de la inscripción."
+        "answer": "La propuesta contempla 5 meses. La oferta para los primeros 50 estudiantes es de ₡25.000 mensuales y una matrícula única de ₡10.000. Las condiciones finales se confirmarán antes de la inscripción."
       },
       {
         "question": "¿Las clases serían virtuales y en vivo?",
@@ -404,29 +404,20 @@
           "type": "radio",
           "required": true,
           "label": "1. ¿Cuál es tu nivel actual de inglés?",
-          "options": [
-            "No hablo inglés",
-            "Básico",
-            "Intermedio",
-            "Avanzado"
-          ]
+          "options": ["No hablo inglés", "Básico", "Intermedio", "Avanzado"]
         },
         {
           "id": "program_recipient",
           "type": "radio",
           "required": true,
           "label": "2. ¿Para quién sería el programa?",
-          "options": [
-            "Para mí",
-            "Para un familiar",
-            "Para ambos"
-          ]
+          "options": ["Para mí", "Para un familiar", "Para ambos"]
         },
         {
           "id": "investment_willingness",
           "type": "radio",
           "required": true,
-          "label": "3. Si el programa tuviera un costo de ₡34.900 mensuales y una matrícula única de ₡19.000, ¿estarías dispuesto(a) a invertir ese monto?",
+          "label": "3. Con la oferta para los primeros 50 estudiantes, si el programa tuviera un costo de ₡25.000 mensuales y una matrícula única de ₡10.000, ¿estarías dispuesto(a) a invertir ese monto?",
           "options": [
             "Sí, estaría dispuesto(a)",
             "Me interesa, pero necesito más información",
@@ -534,7 +525,7 @@
           "id": "investment_willingness",
           "type": "radio",
           "required": true,
-          "label": "3. Si el programa de 5 meses tuviera un costo de ₡39.000 mensuales y una matrícula única de ₡20.000, ¿estarías dispuesto(a) a invertir ese monto?",
+          "label": "3. Con la oferta para los primeros 50 estudiantes, si el programa de 5 meses tuviera un costo de ₡25.000 mensuales y una matrícula única de ₡10.000, ¿estarías dispuesto(a) a invertir ese monto?",
           "options": [
             "Sí, estaría dispuesto(a)",
             "Me interesa, pero necesito más información",
@@ -671,10 +662,7 @@
         "form_submit_success",
         "form_blocked_job_only"
       ],
-      "properties": [
-        "program_type",
-        "form_id"
-      ],
+      "properties": ["program_type", "form_id"],
       "rules": [
         "Disparar form_submit_success únicamente después del guardado confirmado.",
         "form_blocked_job_only corresponde exclusivamente al formulario de carreras.",
@@ -710,8 +698,8 @@
   "acceptance_tests": [
     "Existen /ingles y /carreras-remotas como páginas independientes.",
     "Cada página tiene su propio formulario y CTA.",
-    "Inglés muestra ₡34.900 mensuales y ₡19.000 de matrícula.",
-    "Carreras muestra 5 meses, ₡39.000 mensuales y ₡20.000 de matrícula.",
+    "Inglés muestra ₡25.000 mensuales y ₡10.000 de matrícula.",
+    "Carreras muestra 5 meses, ₡25.000 mensuales y ₡10.000 de matrícula.",
     "No se atribuyen 5 meses al programa de inglés.",
     "El formulario de inglés contiene exactamente sus cinco preguntas y los tres datos de contacto.",
     "El formulario de carreras conserva sus cinco preguntas originales, agrega cero inglés y añade la confirmación como sexta pregunta.",

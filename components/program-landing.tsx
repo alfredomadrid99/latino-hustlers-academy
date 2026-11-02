@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight, Check, Menu, X, Languages, Laptop } from "lucide-react";
 import spec from "../lib/programs.json";
 import { LeadForm } from "./lead-form";
+import { launchOffer } from "../lib/offer";
 import { track } from "../lib/analytics";
 import type { Program } from "../lib/validation";
 export function Brand() {
@@ -294,10 +295,12 @@ export function ProgramLanding({ program }: { program: Program }) {
             <p>{invest.note}</p>
           </div>
           <div className="price-card">
+            <span className="pill">{launchOffer.title}</span>
             <div className="price">
-              {english ? "₡34.900" : "₡39.000"} <span>/ mes</span>
+              {launchOffer.monthly} <span>/ mes</span>
             </div>
-            <p>{invest.enrollment_fee}</p>
+            <p>Matrícula única de {launchOffer.enrollment}</p>
+            <p className="help">{launchOffer.note}</p>
             {!english && <p>5 meses de formación</p>}
             <a className="button" href={`#${form.anchor}`}>
               Registrá tu interés <ArrowUpRight size={18} />

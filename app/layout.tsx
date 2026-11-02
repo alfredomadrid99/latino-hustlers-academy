@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/images/latino-hustlers-logo.png",
+    shortcut: "/images/latino-hustlers-logo.png",
   },
 };
 

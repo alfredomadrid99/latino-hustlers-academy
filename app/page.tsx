@@ -31,12 +31,13 @@ function Brand() {
       href="#inicio"
       aria-label="Latino Hustlers Academy, inicio"
     >
-      <span className="brand-symbol">
-        LH<span>↗</span>
-      </span>
-      <span>
-        LATINO HUSTLERS<small>ACADEMY</small>
-      </span>
+      <img
+        className="brand-logo"
+        src="/images/latino-hustlers-logo.png"
+        alt="Latino Hustlers Academy"
+        width={1254}
+        height={1254}
+      />
     </a>
   );
 }

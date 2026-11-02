@@ -1,0 +1,741 @@
+{
+  "task": "Actualizar el sitio existente de Latino Hustlers Academy para convertirlo en dos landing pages independientes: una de inglés y otra de carreras remotas.",
+  "execution": {
+    "instruction": "Inspeccioná el proyecto existente e implementá los cambios directamente. Conservá el stack, las convenciones y los componentes útiles del proyecto.",
+    "scope": "Modificar el sitio existente, sus rutas, contenido, formularios e integraciones. No crear un proyecto desconectado.",
+    "language": "Español de Costa Rica con voseo consistente.",
+    "design": "Mantener la identidad elegante en negro, dorado y blanco. Mejorar jerarquía, espacios y consistencia cuando sea necesario.",
+    "priority": "Este documento reemplaza las instrucciones anteriores que mezclaban los dos programas o sus formularios."
+  },
+  "architecture": {
+    "pages": [
+      {
+        "route": "/ingles",
+        "purpose": "Captar personas interesadas exclusivamente en el programa de inglés.",
+        "form_id": "english_interest",
+        "primary_cta": "Quiero aprender inglés"
+      },
+      {
+        "route": "/carreras-remotas",
+        "purpose": "Captar personas interesadas en el programa de formación para carreras remotas.",
+        "form_id": "remote_careers_interest",
+        "primary_cta": "Quiero desarrollar habilidades remotas"
+      }
+    ],
+    "root_route": "Si la raíz contiene actualmente la landing combinada, reemplazarla por una selección breve y elegante con dos accesos: Aprender inglés y Formación en carreras remotas. No incluir un tercer formulario.",
+    "independence": [
+      "Cada landing debe funcionar como destino independiente para campañas publicitarias.",
+      "Cada landing debe tener su propio hero, propuesta de valor, contenido, inversión, preguntas frecuentes y formulario.",
+      "Cada landing debe tener URL directa y metadatos específicos.",
+      "No usar pestañas como sustituto de las dos páginas.",
+      "No mezclar precios, preguntas, estados de envío ni mensajes de éxito.",
+      "Cada CTA principal debe llevar al formulario de su propia landing.",
+      "Incluir un enlace secundario discreto hacia el otro programa.",
+      "Los componentes visuales compartidos pueden reutilizarse, pero las respuestas de los formularios deben mantenerse separadas."
+    ]
+  },
+  "brand_and_truth": {
+    "name": "Latino Hustlers Academy",
+    "base_location": "San José, Costa Rica",
+    "delivery": "Formación 100% virtual y en vivo.",
+    "perez_zeledon_status": "Estamos evaluando la apertura de los programas en Pérez Zeledón.",
+    "rules": [
+      "No anunciar una sede física confirmada en Pérez Zeledón.",
+      "No inventar fechas, horarios, acreditaciones, testimonios o cupos.",
+      "No prometer empleo, clientes ni ingresos garantizados.",
+      "La academia cuenta con una agencia que puede conectar perfiles preparados con clientes de Estados Unidos según compatibilidad y oportunidades disponibles.",
+      "No presentar Upwork como socio, patrocinador o entidad que respalda a la academia.",
+      "No convertir resultados individuales del mentor en promesas para estudiantes.",
+      "El precio de inglés pertenece exclusivamente a inglés.",
+      "El precio y la duración de carreras remotas pertenecen exclusivamente a carreras remotas."
+    ]
+  },
+  "visual_direction": {
+    "style": "Educación premium con una presentación editorial, profesional y cercana.",
+    "palette": {
+      "background": "#090B0E",
+      "surface": "#14171C",
+      "gold": "#EBC458",
+      "gold_hover": "#F5D77A",
+      "text": "#F6F5F1",
+      "muted": "#B9BDC5",
+      "border": "#30353D",
+      "light_section": "#F5F2EA"
+    },
+    "requirements": [
+      "Conservar el logo y recursos de marca existentes que sean utilizables.",
+      "Crear heroes distintos para cada programa.",
+      "Usar fotografía y composición visual relevantes para cada público.",
+      "No colocar anuncios completos como fondo del hero.",
+      "Usar tipografía legible, espacios amplios y acentos dorados controlados.",
+      "Evitar estética de gurú financiero, casino o promesas de riqueza.",
+      "Evitar iconos decorativos excesivos y bloques repetitivos.",
+      "Mantener navegación móvil accesible y botones táctiles cómodos.",
+      "Respetar preferencias de movimiento reducido."
+    ]
+  },
+  "english_landing": {
+    "route": "/ingles",
+    "seo": {
+      "title": "Aprendé inglés | Latino Hustlers Academy",
+      "description": "Registrá tu interés en clases de inglés virtuales y en vivo, desde principiante hasta avanzado. Latino Hustlers Academy, Costa Rica."
+    },
+    "header": {
+      "links": [
+        {
+          "label": "El programa",
+          "href": "#programa"
+        },
+        {
+          "label": "Modalidad",
+          "href": "#modalidad"
+        },
+        {
+          "label": "Inversión",
+          "href": "#inversion"
+        },
+        {
+          "label": "Preguntas frecuentes",
+          "href": "#preguntas"
+        }
+      ],
+      "primary_cta": {
+        "label": "Registrá tu interés",
+        "href": "#formulario-ingles"
+      },
+      "cross_link": {
+        "label": "¿Ya hablás inglés? Conocé carreras remotas",
+        "href": "/carreras-remotas"
+      }
+    },
+    "hero": {
+      "eyebrow": "INGLÉS EN VIVO · DESDE COSTA RICA",
+      "headline": "Aprendé inglés y preparate para oportunidades internacionales.",
+      "description": "Empezá desde tu nivel actual y desarrollá tu inglés con clases virtuales en vivo, práctica e interacción con profesores.",
+      "primary_cta": "Quiero aprender inglés",
+      "secondary_cta": "Conocer el programa",
+      "highlights": [
+        "Desde nivel principiante",
+        "Clases virtuales en vivo",
+        "Práctica e interacción"
+      ],
+      "status": "Estamos evaluando la apertura del programa en Pérez Zeledón."
+    },
+    "sections": [
+      {
+        "id": "programa",
+        "title": "No necesitás saber inglés para empezar.",
+        "description": "Queremos conocer tu interés en una formación que contempla niveles desde principiante hasta avanzado. Contanos tu punto de partida para compartirte información adecuada.",
+        "highlights": [
+          "Formación para distintos niveles.",
+          "Práctica de comunicación.",
+          "Interacción con profesores.",
+          "Preparación para seguir desarrollando tu perfil."
+        ]
+      },
+      {
+        "id": "modalidad",
+        "title": "Aprendé en línea, con acompañamiento en tiempo real.",
+        "description": "Clases 100% virtuales y en vivo, con profesores con quienes podés interactuar, hacer preguntas y practicar.",
+        "instruction": "No inventar frecuencia semanal, duración de clases, tamaño de grupos ni acceso a grabaciones."
+      },
+      {
+        "id": "proyeccion",
+        "title": "Un idioma que puede ampliar tus posibilidades.",
+        "description": "Desarrollar tu inglés puede ayudarte a prepararte para futuras oportunidades académicas y profesionales, incluyendo entornos de trabajo remoto.",
+        "clarification": "Este programa es formación de inglés. No es una oferta laboral ni incluye una contratación garantizada.",
+        "cross_link": {
+          "label": "Conocé también nuestra formación en carreras remotas",
+          "href": "/carreras-remotas"
+        }
+      },
+      {
+        "id": "inversion",
+        "title": "Conocé la inversión propuesta.",
+        "monthly_price": "₡34.900 mensuales",
+        "enrollment_fee": "Matrícula única de ₡19.000",
+        "status": "Programa en evaluación de apertura",
+        "note": "Registrá tu interés para recibir información sobre las condiciones, fechas y horarios si avanzamos con el lanzamiento.",
+        "instruction": "No inventar duración total ni calcular el costo completo sin conocer la cantidad de meses."
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Puedo empezar si no hablo inglés?",
+        "answer": "Sí. Estamos evaluando un programa que contempla formación desde nivel principiante. Indicá tu nivel actual en el formulario."
+      },
+      {
+        "question": "¿Las clases serían virtuales?",
+        "answer": "La propuesta contempla clases 100% virtuales y en vivo, con interacción y práctica en tiempo real."
+      },
+      {
+        "question": "¿Puedo registrar interés para un familiar?",
+        "answer": "Sí. Podés indicar si el programa sería para vos, para un familiar o para ambos."
+      },
+      {
+        "question": "¿Cuánto costaría?",
+        "answer": "Estamos evaluando una mensualidad de ₡34.900 y una matrícula única de ₡19.000. Las condiciones finales se confirmarán antes de la inscripción."
+      },
+      {
+        "question": "¿Ya está confirmada la apertura en Pérez Zeledón?",
+        "answer": "Todavía estamos evaluando la apertura. Este registro nos permite conocer el interés y contactar a las personas si avanzamos."
+      },
+      {
+        "question": "¿El programa incluye trabajo?",
+        "answer": "No. Es un programa educativo para desarrollar tu inglés y prepararte para futuras oportunidades. No constituye una oferta de empleo."
+      }
+    ]
+  },
+  "careers_landing": {
+    "route": "/carreras-remotas",
+    "seo": {
+      "title": "Formación en carreras remotas | Latino Hustlers Academy",
+      "description": "Desarrollá habilidades de asistencia virtual, gestión de proyectos y reclutamiento. Registrá tu interés en Latino Hustlers Academy."
+    },
+    "header": {
+      "links": [
+        {
+          "label": "Áreas de formación",
+          "href": "#areas"
+        },
+        {
+          "label": "Metodología",
+          "href": "#metodologia"
+        },
+        {
+          "label": "Tu mentor",
+          "href": "#mentor"
+        },
+        {
+          "label": "Inversión",
+          "href": "#inversion"
+        }
+      ],
+      "primary_cta": {
+        "label": "Registrá tu interés",
+        "href": "#formulario-carreras"
+      },
+      "cross_link": {
+        "label": "¿Querés aprender inglés? Conocé el programa",
+        "href": "/ingles"
+      }
+    },
+    "hero": {
+      "eyebrow": "FORMACIÓN PARA CARRERAS REMOTAS",
+      "headline": "Convertí tu inglés en una habilidad profesional con proyección internacional.",
+      "description": "Desarrollá herramientas para ofrecer servicios, gestionar clientes y prepararte para oportunidades remotas con clientes de Estados Unidos.",
+      "primary_cta": "Quiero conocer el programa",
+      "secondary_cta": "Explorar áreas de formación",
+      "highlights": [
+        "Propuesta de 5 meses",
+        "Formación práctica",
+        "Clases virtuales en vivo"
+      ],
+      "clarification": "Es un programa de formación, no una oferta de empleo. No se garantiza contratación ni clientes."
+    },
+    "career_areas": {
+      "id": "areas",
+      "title": "Elegí las habilidades que querés desarrollar.",
+      "items": [
+        {
+          "title": "Asistencia virtual",
+          "subtitle": "Virtual Assistant",
+          "skills": [
+            "Soporte administrativo.",
+            "Gestión de correos y agendas.",
+            "Organización y seguimiento.",
+            "Comunicación con clientes."
+          ]
+        },
+        {
+          "title": "Gestión de proyectos",
+          "subtitle": "Project Manager",
+          "skills": [
+            "Coordinación de equipos remotos.",
+            "Planificación y seguimiento.",
+            "Organización de procesos.",
+            "Herramientas de gestión."
+          ]
+        },
+        {
+          "title": "Reclutamiento y recursos humanos",
+          "subtitle": "Recruiter / HR",
+          "skills": [
+            "Búsqueda de talento.",
+            "Coordinación de entrevistas.",
+            "Seguimiento de candidatos.",
+            "Comunicación con clientes."
+          ]
+        }
+      ],
+      "additional_area": "También se puede mencionar marketing digital como otra área de formación de la academia, según los anuncios proporcionados, sin afirmar que está incluida en esta convocatoria.",
+      "form_constraint": "No agregar Marketing digital ni otras opciones al formulario de carreras. Conservar exactamente las tres áreas y la opción de indecisión proporcionadas por el usuario."
+    },
+    "methodology": {
+      "id": "metodologia",
+      "title": "Preparación práctica para ofrecer servicios profesionales.",
+      "items": [
+        {
+          "title": "Herramientas y habilidades",
+          "description": "Conocé herramientas digitales y procesos aplicados al trabajo remoto."
+        },
+        {
+          "title": "Práctica y acompañamiento",
+          "description": "Participá en clases en vivo, hacé preguntas y realizá ejercicios prácticos."
+        },
+        {
+          "title": "Clientes y plataformas",
+          "description": "Aprendé sobre Upwork, Fiverr, presentación de servicios y gestión de clientes."
+        },
+        {
+          "title": "Preparación profesional",
+          "description": "Desarrollá tu perfil para explorar oportunidades de manera más preparada."
+        }
+      ]
+    },
+    "agency_connection": {
+      "title": "Una academia conectada con necesidades reales.",
+      "description": "Contamos con una agencia que puede conectar perfiles preparados con clientes de Estados Unidos cuando existen oportunidades compatibles.",
+      "clarification": "La conexión depende del nivel de inglés, las habilidades, el perfil y las oportunidades disponibles. Estudiar no garantiza empleo, clientes ni ingresos."
+    },
+    "investment": {
+      "id": "inversion",
+      "title": "Una propuesta para desarrollar tu siguiente etapa profesional.",
+      "duration": "5 meses",
+      "monthly_price": "₡39.000 mensuales",
+      "enrollment_fee": "Matrícula única de ₡20.000",
+      "status": "Programa en evaluación de apertura",
+      "note": "La propuesta corresponde a formación en carreras remotas. No incluye automáticamente el programa de inglés."
+    },
+    "faq": [
+      {
+        "question": "¿Esto es una oferta de trabajo?",
+        "answer": "No. Es un programa de formación para desarrollar habilidades y prepararte para oportunidades remotas."
+      },
+      {
+        "question": "¿Necesito experiencia previa?",
+        "answer": "Podés registrar tu interés sin experiencia previa. La formación busca ayudarte a desarrollar habilidades profesionales."
+      },
+      {
+        "question": "¿Y si todavía no hablo inglés?",
+        "answer": "Podés indicarlo en el formulario. También contamos con una página específica para registrar tu interés en el programa de inglés. La preparación requerida dependerá de la formación y de las oportunidades que busqués."
+      },
+      {
+        "question": "¿Me van a conseguir clientes?",
+        "answer": "Nuestra agencia puede conectar perfiles preparados con oportunidades compatibles, pero no garantiza clientes ni contratación."
+      },
+      {
+        "question": "¿Cuánto dura y cuál sería la inversión?",
+        "answer": "La propuesta contempla 5 meses, con una mensualidad de ₡39.000 y una matrícula única de ₡20.000. Las condiciones finales se confirmarán antes de la inscripción."
+      },
+      {
+        "question": "¿Las clases serían virtuales y en vivo?",
+        "answer": "Sí. La propuesta contempla interacción con instructores, preguntas y ejercicios prácticos en tiempo real."
+      }
+    ]
+  },
+  "mentor": {
+    "placement": {
+      "careers_page": "Sección destacada después de la metodología y antes de la inversión.",
+      "english_page": "Sección secundaria de trayectoria del fundador o mentor, sin presentarlo como profesor de inglés salvo confirmación."
+    },
+    "title": "Conocé a tu mentor",
+    "name": "Alberto Piñeres",
+    "headline": "De empezar desde cero a superar los US$200.000 en Upwork.",
+    "description": "Conocé la trayectoria de Alberto y su experiencia desarrollando servicios remotos y un negocio de asistentes virtuales.",
+    "track_record": [
+      {
+        "value": "Más de US$200.000",
+        "label": "Generados en Upwork",
+        "context": "Monto acumulado; no presentarlo como ingreso mensual o anual."
+      },
+      {
+        "value": "Top 1%",
+        "label": "De freelancers a nivel mundial",
+        "context": "Dato de trayectoria proporcionado por el cliente. No convertirlo en una insignia oficial de Upwork ni atribuirle una categoría específica sin respaldo."
+      },
+      {
+        "value": "Más de 35",
+        "label": "Trabajos completados",
+        "context": "Todos remotos y en inglés."
+      },
+      {
+        "value": "ExclusiveAssist.com",
+        "label": "Fundador",
+        "context": "Negocio de contratación de asistentes virtuales con una cifra reportada de US$360.000 al año. No presentarla como utilidad neta o ingreso personal."
+      },
+      {
+        "value": "Sin título universitario",
+        "label": "Su punto de partida",
+        "context": "Comenzó sin experiencia previa."
+      }
+    ],
+    "source_note": "Información de trayectoria proporcionada por Latino Hustlers Academy.",
+    "results_note": "La trayectoria del mentor es individual. Los resultados de cada estudiante dependen de su preparación, dedicación, perfil y oportunidades.",
+    "asset_rules": [
+      "Usar una fotografía real de Alberto si está disponible.",
+      "No usar una persona generada o una foto de stock como si fuera Alberto.",
+      "Si no hay fotografía, crear una composición tipográfica elegante.",
+      "No inventar capturas de ingresos, badges, reseñas ni pruebas documentales.",
+      "Usar ExclusiveAssist.com como enlace externo, sin afirmar que se verificó su contenido.",
+      "Centralizar las afirmaciones de trayectoria para facilitar actualizaciones y documentar que fueron suministradas por el cliente."
+    ]
+  },
+  "forms": {
+    "global_rules": [
+      "Usar dos instancias independientes y dos esquemas de validación diferenciados.",
+      "No añadir preguntas de ubicación, objetivos, presupuesto alternativo ni selección de programa.",
+      "No cambiar el orden ni el texto de las preguntas suministradas, salvo las modificaciones expresamente descritas para carreras.",
+      "Si el aviso de privacidad requiere un control adicional, presentarlo separado de las preguntas de calificación.",
+      "Conservar respuestas al retroceder.",
+      "No persistir datos de contacto en localStorage.",
+      "Mostrar éxito solo después de confirmar el guardado real.",
+      "Mantener el diseño del formulario claro, accesible y cómodo en móvil."
+    ],
+    "english": {
+      "id": "english_interest",
+      "anchor": "formulario-ingles",
+      "title": "LATINO HUSTLERS ACADEMY — FORMULARIO INGLÉS",
+      "headline": "Aprendé inglés y preparate para oportunidades internacionales",
+      "introduction": "Estamos evaluando abrir nuestro programa de inglés en Pérez Zeledón. Queremos conocer tu interés en clases de inglés desde nivel principiante hasta avanzado, con preparación para futuras oportunidades laborales remotas.",
+      "fields": [
+        {
+          "id": "english_level",
+          "type": "radio",
+          "required": true,
+          "label": "1. ¿Cuál es tu nivel actual de inglés?",
+          "options": [
+            "No hablo inglés",
+            "Básico",
+            "Intermedio",
+            "Avanzado"
+          ]
+        },
+        {
+          "id": "program_recipient",
+          "type": "radio",
+          "required": true,
+          "label": "2. ¿Para quién sería el programa?",
+          "options": [
+            "Para mí",
+            "Para un familiar",
+            "Para ambos"
+          ]
+        },
+        {
+          "id": "investment_willingness",
+          "type": "radio",
+          "required": true,
+          "label": "3. Si el programa tuviera un costo de ₡34.900 mensuales y una matrícula única de ₡19.000, ¿estarías dispuesto(a) a invertir ese monto?",
+          "options": [
+            "Sí, estaría dispuesto(a)",
+            "Me interesa, pero necesito más información",
+            "No, está fuera de mi presupuesto"
+          ]
+        },
+        {
+          "id": "start_timeline",
+          "type": "radio",
+          "required": true,
+          "label": "4. ¿Cuándo te gustaría comenzar?",
+          "options": [
+            "En los próximos 30 días",
+            "En 2 a 3 meses",
+            "Solo estoy investigando opciones"
+          ]
+        },
+        {
+          "id": "virtual_comfort",
+          "type": "radio",
+          "required": true,
+          "label": "5. ¿Te sentirías cómodo(a) tomando clases de inglés 100% virtuales y en vivo, con profesores con quienes podés interactuar, hacer preguntas y practicar en tiempo real?",
+          "options": [
+            "Sí, me sentiría completamente cómodo(a) con esta modalidad",
+            "Lo consideraría, aunque preferiría una modalidad híbrida (virtual y presencial)",
+            "No, preferiría clases presenciales"
+          ]
+        }
+      ],
+      "contact_section": {
+        "title": "DATOS DE CONTACTO",
+        "fields": [
+          {
+            "id": "full_name",
+            "label": "Nombre completo",
+            "type": "text",
+            "required": true,
+            "autocomplete": "name"
+          },
+          {
+            "id": "whatsapp",
+            "label": "WhatsApp",
+            "type": "tel",
+            "required": true,
+            "autocomplete": "tel",
+            "default_country": "CR",
+            "allow_country_change": true
+          },
+          {
+            "id": "email",
+            "label": "Correo electrónico",
+            "type": "email",
+            "required": true,
+            "autocomplete": "email"
+          }
+        ]
+      },
+      "qualification": "Ninguna respuesta de nivel, destinatario, presupuesto, fecha o modalidad bloquea el envío.",
+      "employment_confirmation": "No agregar la pregunta de confirmación laboral al formulario de inglés. Mantener la aclaración educativa en el contenido de la landing.",
+      "submit_label": "Registrar mi interés",
+      "success": {
+        "title": "¡Gracias por tu interés!",
+        "message": "Estamos evaluando la apertura de Latino Hustlers Academy en Pérez Zeledón. Si avanzamos con el lanzamiento, podremos contactarte con más información sobre fechas, horarios y matrícula."
+      }
+    },
+    "careers": {
+      "id": "remote_careers_interest",
+      "anchor": "formulario-carreras",
+      "title": "LATINO HUSTLERS ACADEMY — FORMULARIO CARRERAS REMOTAS",
+      "headline": "¿Ya hablás inglés? Aprendé a conseguir clientes de alta paga en USA 🇺🇸",
+      "introduction": [
+        "Estamos evaluando abrir en Pérez Zeledón un programa de formación de 5 meses para personas que desean desarrollar habilidades profesionales, aprender a conseguir clientes internacionales y prepararse para oportunidades de trabajo remoto.",
+        "Aprendé sobre plataformas como Upwork y Fiverr, gestión de clientes y herramientas profesionales, sin necesidad de experiencia previa."
+      ],
+      "exactness_rule": "Conservar el formulario original de carreras. Las únicas modificaciones a sus preguntas son agregar la opción de cero inglés a la primera pregunta y añadir la confirmación obligatoria como última pregunta de calificación.",
+      "fields": [
+        {
+          "id": "english_level",
+          "type": "radio",
+          "required": true,
+          "label": "1. ¿Cuál es tu nivel actual de inglés?",
+          "options": [
+            "No hablo inglés / Empiezo desde cero",
+            "Básico",
+            "Intermedio",
+            "Avanzado",
+            "Fluido / bilingüe"
+          ]
+        },
+        {
+          "id": "career_interests",
+          "type": "checkbox_group",
+          "required": true,
+          "minimum_selections": 1,
+          "label": "2. ¿Cuál de estas áreas te interesaría aprender? (Podés seleccionar varias opciones)",
+          "options": [
+            "Virtual Assistant / Asistente virtual",
+            "Project Manager / Gestión de proyectos",
+            "Recruiter / Reclutamiento y recursos humanos",
+            "Todavía no estoy seguro(a)"
+          ],
+          "selection_rule": "Todavía no estoy seguro(a) es exclusiva: desmarca las especialidades al seleccionarla y se desmarca al elegir una especialidad."
+        },
+        {
+          "id": "investment_willingness",
+          "type": "radio",
+          "required": true,
+          "label": "3. Si el programa de 5 meses tuviera un costo de ₡39.000 mensuales y una matrícula única de ₡20.000, ¿estarías dispuesto(a) a invertir ese monto?",
+          "options": [
+            "Sí, estaría dispuesto(a)",
+            "Me interesa, pero necesito más información",
+            "No, está fuera de mi presupuesto"
+          ]
+        },
+        {
+          "id": "start_timeline",
+          "type": "radio",
+          "required": true,
+          "label": "4. ¿Cuándo te gustaría comenzar?",
+          "options": [
+            "En los próximos 30 días",
+            "En 2 a 3 meses",
+            "Solo estoy investigando opciones"
+          ]
+        },
+        {
+          "id": "virtual_comfort",
+          "type": "radio",
+          "required": true,
+          "label": "5. ¿Te sentirías cómodo(a) participando en una formación 100% virtual y en vivo, con instructores con quienes podés interactuar, hacer preguntas y realizar ejercicios prácticos en tiempo real?",
+          "options": [
+            "Sí, me sentiría completamente cómodo(a) con esta modalidad",
+            "Lo consideraría, aunque preferiría una modalidad híbrida (virtual y presencial)",
+            "No, preferiría clases presenciales"
+          ]
+        },
+        {
+          "id": "training_acknowledgement",
+          "type": "radio",
+          "required": true,
+          "label": "6. ¿Entendés que este es un programa de formación donde te capacitamos y preparamos para oportunidades remotas, y que no es una oferta de trabajo ni garantiza empleo o clientes?",
+          "options": [
+            {
+              "value": "understands_training",
+              "label": "Sí, lo entiendo perfectamente"
+            },
+            {
+              "value": "seeking_job_only",
+              "label": "No, yo estoy buscando trabajo"
+            }
+          ]
+        }
+      ],
+      "contact_section": {
+        "title": "DATOS DE CONTACTO",
+        "fields": [
+          {
+            "id": "full_name",
+            "label": "Nombre completo",
+            "type": "text",
+            "required": true,
+            "autocomplete": "name"
+          },
+          {
+            "id": "whatsapp",
+            "label": "WhatsApp",
+            "type": "tel",
+            "required": true,
+            "autocomplete": "tel",
+            "default_country": "CR",
+            "allow_country_change": true
+          },
+          {
+            "id": "email",
+            "label": "Correo electrónico",
+            "type": "email",
+            "required": true,
+            "autocomplete": "email"
+          }
+        ]
+      },
+      "conditional_logic": {
+        "blocking_condition": "training_acknowledgement !== 'understands_training'",
+        "negative_answer_behavior": [
+          "Impedir el envío del formulario.",
+          "Si hay pasos, impedir avanzar hacia los datos de contacto.",
+          "Mostrar el mensaje de orientación junto a la pregunta.",
+          "Permitir revisar la respuesta sin borrar el resto del formulario.",
+          "No transmitir ni guardar el registro.",
+          "No mostrar la pantalla de registro exitoso.",
+          "No disparar una conversión de lead."
+        ],
+        "negative_answer_message": "¡Gracias por tu interés! Por el momento no estamos ofreciendo empleos por este medio. Este formulario es únicamente para personas interesadas en nuestro programa de formación. Si también te interesa capacitarte, podés revisar tu respuesta para continuar.",
+        "server_rule": "El servidor debe rechazar cualquier solicitud de carreras cuyo training_acknowledgement no sea exactamente understands_training, incluso si se omite o altera desde fuera de la interfaz.",
+        "zero_english_rule": "Permitir el registro de quienes no hablan inglés. No redirigirlos automáticamente ni cambiar el programa seleccionado.",
+        "other_answers_rule": "No bloquear por nivel de inglés, presupuesto, fecha de inicio o preferencia de modalidad."
+      },
+      "submit_label": "Registrar mi interés",
+      "success": {
+        "title": "¡Gracias por tu interés!",
+        "message": "Estamos evaluando la apertura de Latino Hustlers Academy en Pérez Zeledón. Si avanzamos con el lanzamiento, podremos contactarte con más información sobre el programa, horarios y fechas de inicio."
+      }
+    }
+  },
+  "data_and_integrations": {
+    "reuse": "Conservar y adaptar las integraciones reales existentes. No sustituir almacenamiento funcional por simulaciones.",
+    "routing": [
+      "Cada envío debe identificar inequívocamente program_type como english o remote_careers.",
+      "Usar endpoints separados o un endpoint compartido con esquemas discriminados y validación estricta.",
+      "Validar program_type en servidor.",
+      "Aplicar el bloqueo laboral solo al esquema de carreras.",
+      "No exigir training_acknowledgement al esquema de inglés."
+    ],
+    "storage": [
+      "Conservar la procedencia y las respuestas de cada formulario por separado.",
+      "No sobrescribir un registro de inglés con uno de carreras por compartir el mismo correo.",
+      "Si el CRM agrupa contactos, conservar ambos intereses y sus respectivos envíos.",
+      "No reclasificar automáticamente leads históricos sin información suficiente.",
+      "Si se reciben notificaciones internas mediante una integración existente, identificar claramente el programa."
+    ],
+    "validation": [
+      "Validar campos y opciones tanto en cliente como en servidor.",
+      "Aceptar nombres con tildes y nombres compuestos.",
+      "Validar WhatsApp internacional y normalizar a E.164.",
+      "Validar correo electrónico.",
+      "Evitar duplicados por doble clic y reintentos.",
+      "Mantener protección contra spam y límites de frecuencia.",
+      "No exponer secretos ni datos personales en logs."
+    ],
+    "privacy": [
+      "Mantener un aviso de privacidad funcional y adaptado al contacto sobre el programa elegido.",
+      "Si existe consentimiento de contacto, mantenerlo separado de la pregunta de confirmación laboral.",
+      "No preseleccionar autorizaciones.",
+      "No solicitar datos personales del familiar: los datos de contacto corresponden a quien completa el formulario.",
+      "No enviar datos personales ni respuestas completas a herramientas analíticas."
+    ],
+    "analytics": {
+      "instruction": "Adaptar los eventos existentes para distinguir las dos landing pages sin duplicar conversiones.",
+      "event_names": [
+        "landing_view",
+        "form_start",
+        "form_submit_success",
+        "form_blocked_job_only"
+      ],
+      "properties": [
+        "program_type",
+        "form_id"
+      ],
+      "rules": [
+        "Disparar form_submit_success únicamente después del guardado confirmado.",
+        "form_blocked_job_only corresponde exclusivamente al formulario de carreras.",
+        "No contar un bloqueo como lead.",
+        "Mantener campañas y parámetros de atribución separados cuando estén disponibles.",
+        "No activar proveedores publicitarios nuevos sin configuración."
+      ]
+    }
+  },
+  "implementation_requirements": {
+    "components": [
+      "Compartir header, footer, botones y elementos visuales cuando corresponda.",
+      "Mantener configuraciones de contenido independientes por programa.",
+      "Usar identificadores únicos para controles, formularios y anclas.",
+      "Usar etiquetas visibles y fieldset con legend para grupos de selección.",
+      "Mantener errores en español y foco accesible.",
+      "Actualizar navegación, enlaces internos, sitemap y metadatos para ambas rutas.",
+      "No dejar contenido de la landing anterior que contradiga la nueva separación."
+    ],
+    "submission_states": [
+      "Estado inicial.",
+      "Validación de campos.",
+      "Envío en progreso.",
+      "Error recuperable.",
+      "Bloqueo por búsqueda exclusiva de trabajo en carreras.",
+      "Éxito confirmado."
+    ],
+    "failure_handling": "Ante un error, conservar las respuestas y permitir reintentar. No simular éxito si falta una integración.",
+    "responsive": "Verificar ambas páginas en móvil, tablet y escritorio, sin desbordamientos horizontales.",
+    "performance": "Optimizar imágenes y conservar una carga rápida.",
+    "deployment": "Preparar los cambios y verificar el proyecto. No publicar automáticamente si el entorno requiere una acción de despliegue independiente."
+  },
+  "acceptance_tests": [
+    "Existen /ingles y /carreras-remotas como páginas independientes.",
+    "Cada página tiene su propio formulario y CTA.",
+    "Inglés muestra ₡34.900 mensuales y ₡19.000 de matrícula.",
+    "Carreras muestra 5 meses, ₡39.000 mensuales y ₡20.000 de matrícula.",
+    "No se atribuyen 5 meses al programa de inglés.",
+    "El formulario de inglés contiene exactamente sus cinco preguntas y los tres datos de contacto.",
+    "El formulario de carreras conserva sus cinco preguntas originales, agrega cero inglés y añade la confirmación como sexta pregunta.",
+    "El formulario de carreras no incluye preguntas adicionales de ubicación o selección de programa.",
+    "El formulario de carreras no añade marketing digital como opción.",
+    "La respuesta negativa de confirmación bloquea el envío en cliente y servidor.",
+    "La confirmación ausente también provoca rechazo en carreras.",
+    "El formulario de inglés funciona sin confirmación laboral.",
+    "Las respuestas de presupuesto o modalidad no impiden enviar.",
+    "Una persona sin inglés puede enviar cualquiera de los formularios.",
+    "Cada formulario muestra su mensaje final exacto.",
+    "El mismo contacto puede registrar interés en ambos programas sin perder información.",
+    "La trayectoria de Alberto aparece con los datos proporcionados y sin promesas de resultados.",
+    "No se presentan fotografías ficticias como si fueran del mentor.",
+    "Ningún formulario muestra éxito sin confirmación del servidor."
+  ],
+  "delivery": {
+    "instruction": "Implementá los cambios, ejecutá las comprobaciones disponibles y revisá visualmente ambas páginas.",
+    "final_report": [
+      "Rutas implementadas.",
+      "Resumen de cambios.",
+      "Estado real de las integraciones.",
+      "Comprobaciones realizadas.",
+      "Configuraciones o recursos pendientes, si existen."
+    ]
+  }
+}

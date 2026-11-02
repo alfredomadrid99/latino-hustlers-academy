@@ -2,8 +2,11 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowLeft, Check, ShieldCheck } from "lucide-react";
 import content from "../lib/content.json";
+import spec from "../lib/programs.json";
 import {
-  steps,
+  getSteps,
+  getForm,
+  type Program,
   validate,
   selectInterest,
   type Answers,
@@ -11,7 +14,10 @@ import {
 } from "../lib/validation";
 import { track } from "../lib/analytics";
 const copy = content.lead_form;
-export function LeadForm({ prefill }: { prefill: string }) {
+export function LeadForm({ program }: { program: Program }) {
+  const steps = getSteps(program),
+    config = getForm(program);
+  const eventData = { program_type: program, form_id: config.id };
   const [step, setStep] = useState(0),
     [data, setData] = useState<Answers>({ whatsapp: "+506 " }),
     [errors, setErrors] = useState<Record<string, string>>({}),
@@ -25,20 +31,20 @@ export function LeadForm({ prefill }: { prefill: string }) {
     heading = useRef<HTMLHeadingElement>(null);
   function change(key: string, value: Answers[string]) {
     if (!tracked.current) {
-      track("form_start");
+      track("form_start", eventData);
       tracked.current = true;
     }
     setData((d) => ({ ...d, [key]: value }));
     setErrors((e) => ({ ...e, [key]: "" }));
     if (key === "training_acknowledgement" && value === "seeking_job_only")
-      track("form_blocked_job_only");
+      track("form_blocked_job_only", eventData);
   }
   useEffect(() => {
     started.current = Date.now();
   }, []);
   const answers: Answers = {
     ...data,
-    learning_goal: data.learning_goal || prefill,
+    program_type: program,
   };
   function focusStep(next: number) {
     setStep(next);
@@ -47,7 +53,8 @@ export function LeadForm({ prefill }: { prefill: string }) {
   function showErrors(next: Record<string, string>) {
     setErrors(next);
     setTimeout(
-      () => document.getElementById(Object.keys(next)[0])?.focus(),
+      () =>
+        document.getElementById(`${program}-${Object.keys(next)[0]}`)?.focus(),
       30,
     );
   }
@@ -59,8 +66,7 @@ export function LeadForm({ prefill }: { prefill: string }) {
       showErrors(next);
       return;
     }
-    if (step < 3) {
-      track("form_step_complete", { step });
+    if (step < steps.length - 1) {
       focusStep(step + 1);
       return;
     }
@@ -95,7 +101,7 @@ export function LeadForm({ prefill }: { prefill: string }) {
             : copy.errors.submission,
         );
       setDone(true);
-      track("lead_submit_success");
+      track("form_submit_success", eventData);
       setTimeout(() => heading.current?.focus(), 30);
     } catch {
       setFailure(copy.errors.submission);
@@ -113,11 +119,7 @@ export function LeadForm({ prefill }: { prefill: string }) {
         <h3 ref={heading} tabIndex={-1}>
           {copy.success.title}
         </h3>
-        <p>
-          {data.location === "perez_zeledon"
-            ? copy.success.perez_zeledon_message
-            : copy.success.general_message}
-        </p>
+        <p>{config.success.message}</p>
         <p>{copy.success.clarification}</p>
       </div>
     );
@@ -142,9 +144,11 @@ export function LeadForm({ prefill }: { prefill: string }) {
               {f.options.map((o, i) => (
                 <label className="choice" key={o.value}>
                   <input
-                    id={i === 0 ? f.id : undefined}
+                    id={
+                      i === 0 ? `${program}-${f.id}` : `${program}-${f.id}-${i}`
+                    }
                     type={f.type === "checkbox_group" ? "checkbox" : "radio"}
-                    name={f.id}
+                    name={`${program}-${f.id}`}
                     value={o.value}
                     checked={
                       Array.isArray(v) ? v.includes(o.value) : v === o.value
@@ -166,7 +170,7 @@ export function LeadForm({ prefill }: { prefill: string }) {
         ) : f.type === "checkbox" ? (
           <label className="consent">
             <input
-              id={f.id}
+              id={`${program}-${f.id}`}
               type="checkbox"
               checked={v === true}
               onChange={(e) => change(f.id, e.target.checked)}
@@ -185,7 +189,7 @@ export function LeadForm({ prefill }: { prefill: string }) {
           </label>
         ) : (
           <>
-            <label htmlFor={f.id}>{f.label}</label>
+            <label htmlFor={`${program}-${f.id}`}>{f.label}</label>
             {f.type === "select" ? (
               <select
                 id={f.id}
@@ -239,21 +243,16 @@ export function LeadForm({ prefill }: { prefill: string }) {
       </div>
     );
   }
-  const blocked = data.training_acknowledgement === "seeking_job_only";
+  const blocked =
+    program === "remote_careers" &&
+    data.training_acknowledgement === "seeking_job_only";
   return (
-    <form className="form-card" onSubmit={submit} noValidate>
+    <form id={config.id} className="form-card" onSubmit={submit} noValidate>
       <div className="form-progress">
-        <span>PASO {step + 1} DE 4</span>
         <span>
-          {
-            [
-              "Tu punto de partida",
-              "Tu perfil",
-              "Tu disponibilidad",
-              "Tus datos",
-            ][step]
-          }
+          PASO {step + 1} DE {steps.length}
         </span>
+        <span>{steps[step].title}</span>
       </div>
       <div className="progress-bars" aria-hidden="true">
         {steps.map((s, i) => (
@@ -277,7 +276,7 @@ export function LeadForm({ prefill }: { prefill: string }) {
       {(steps[step].fields as Field[]).map(field)}
       {blocked && (
         <p className="notice" role="status">
-          {copy.conditional_logic.employment_only.message}
+          {spec.forms.careers.conditional_logic.negative_answer_message}
         </p>
       )}
       {failure && (
@@ -299,7 +298,7 @@ export function LeadForm({ prefill }: { prefill: string }) {
         <button className="button" disabled={blocked || busy} type="submit">
           {busy
             ? copy.submit_button.loading
-            : step < 3
+            : step < steps.length - 1
               ? "Continuar"
               : failure
                 ? copy.submit_button.retry

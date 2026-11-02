@@ -39,3 +39,10 @@ Completar identidad jurídica, canal verificado para consultas/retiro de consent
 No hay exportador público de leads. La consulta debe hacerse con acceso autorizado a D1 o con las herramientas de base de datos de Sites; no publicar endpoints de lectura sin autenticación.
 
 Fotografía ilustrativa: Anthony Shkraba, Pexels, recurso 5244025. No representa alumnado real. Tipografías: Manrope e Inter servidas por Google Fonts.
+
+## Actualización: programas independientes
+Rutas: `/ingles` y `/carreras-remotas`. `/` permite elegir la ruta sin formulario.
+Contenido y trayectoria suministrada por el cliente: `lib/programs.json`.
+Validación discriminada por `program_type`; almacenamiento en el payload existente con `program_type` y `form_id`, sin reclasificar registros históricos. No se requieren migraciones nuevas.
+Las pruebas actuales son `node scripts/test-programs.mjs` con servidor local activo. Sustituyen al script anterior.
+No se publicó automáticamente esta actualización. La versión alojada conserva la publicación previa hasta un despliegue explícito.

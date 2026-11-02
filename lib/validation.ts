@@ -1,4 +1,5 @@
 import content from "./content.json";
+import spec from "./programs.json";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 export type Answers = Record<string, string | string[] | boolean>;
 export type Field = {
@@ -10,10 +11,42 @@ export type Field = {
   autocomplete?: string;
   options?: { value: string; label: string }[];
 };
-export const steps: { id: string; title: string; fields: Field[] }[] =
-  content.lead_form.steps;
+export type Program = "english" | "remote_careers";
+export function getForm(program: Program) {
+  return program === "english" ? spec.forms.english : spec.forms.careers;
+}
+export function getSteps(
+  program: Program,
+): { id: string; title: string; fields: Field[] }[] {
+  const form = getForm(program);
+  const fields: Field[] = form.fields.map((f) => ({
+    ...f,
+    options: f.options.map((o) =>
+      typeof o === "string" ? { value: o, label: o } : o,
+    ),
+  }));
+  return [
+    { id: "qualification", title: "Tu interés en la formación", fields },
+    {
+      id: "contact",
+      title: "Datos de contacto",
+      fields: [
+        ...form.contact_section.fields,
+        {
+          id: "contact_consent",
+          type: "checkbox",
+          label: "Autorización de contacto",
+          required: true,
+        },
+      ],
+    },
+  ];
+}
 export function validate(data: Answers, step?: number) {
   const errors: Record<string, string> = {};
+  if (data.program_type !== "english" && data.program_type !== "remote_careers")
+    return { program_type: "Seleccioná un programa válido." };
+  const steps = getSteps(data.program_type);
   const fields = (step === undefined ? steps : [steps[step]]).flatMap(
     (s) => s.fields,
   ) as Field[];
@@ -39,7 +72,7 @@ export function validate(data: Answers, step?: number) {
       (!Array.isArray(v) ||
         new Set(v).size !== v.length ||
         (v.length > 1 &&
-          v.some((x) => ["english_only", "undecided"].includes(x))))
+          v.some((x) => ["Todavía no estoy seguro(a)"].includes(x))))
     )
       errors[f.id] = "Elegí especialidades o una sola opción de orientación.";
     if (
@@ -52,12 +85,13 @@ export function validate(data: Answers, step?: number) {
       errors[f.id] = "Usá un máximo de 250 caracteres.";
   }
   if (
+    data.program_type === "remote_careers" &&
     (step === undefined || step === 0) &&
     data.training_acknowledgement !== "understands_training"
   )
     errors.training_acknowledgement =
-      content.lead_form.conditional_logic.employment_only.message;
-  if (step === undefined || step === 3) {
+      spec.forms.careers.conditional_logic.negative_answer_message;
+  if (step === undefined || step === 1) {
     if (
       typeof data.email !== "string" ||
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())
@@ -75,10 +109,10 @@ export function validate(data: Answers, step?: number) {
 }
 export function selectInterest(current: string[], value: string) {
   if (current.includes(value)) return current.filter((x) => x !== value);
-  return ["english_only", "undecided"].includes(value)
+  return ["Todavía no estoy seguro(a)"].includes(value)
     ? [value]
     : [
-        ...current.filter((x) => !["english_only", "undecided"].includes(x)),
+        ...current.filter((x) => !["Todavía no estoy seguro(a)"].includes(x)),
         value,
       ];
 }

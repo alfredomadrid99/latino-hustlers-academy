@@ -10,7 +10,7 @@ export default function Privacy() {
       </p>
       <h2>Qué información solicitamos</h2>
       <p>
-        Tu nombre, WhatsApp, correo, ubicación general, nivel de inglés,
+        Tu nombre, WhatsApp, correo, programa elegido y, según el formulario, destinatario del programa, nivel de inglés,
         intereses de formación, disponibilidad, preferencias de modalidad,
         disposición de inversión y autorización de contacto.
       </p>
@@ -53,3 +53,4 @@ export default function Privacy() {
     </main>
   );
 }
+

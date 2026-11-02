@@ -1,6 +1,11 @@
 import { env } from "cloudflare:workers";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
-import { validate, steps, type Answers } from "../../../lib/validation";
+import {
+  validate,
+  getSteps,
+  type Program,
+  type Answers,
+} from "../../../lib/validation";
 const json = (value: unknown, status = 200) =>
   Response.json(value, { status, headers: { "Cache-Control": "no-store" } });
 async function digest(value: string) {
@@ -44,7 +49,14 @@ export async function POST(request: Request) {
         { error: "El registro no está disponible en este momento." },
         503,
       );
-    const data: Answers = {};
+    const data: Answers = {
+      program_type: raw.program_type,
+      form_id:
+        raw.program_type === "english"
+          ? "english_interest"
+          : "remote_careers_interest",
+    };
+    const steps = getSteps(raw.program_type as Program);
     for (const f of steps.flatMap((s) => s.fields)) {
       const v = raw[f.id];
       data[f.id] = typeof v === "string" ? v.trim() : v;
@@ -84,7 +96,7 @@ export async function POST(request: Request) {
         id,
         payload,
         fingerprint,
-        data.english_level === "zero"
+        String(data.english_level).startsWith("No hablo inglés")
           ? "english_from_zero"
           : "training_interest",
         now,

@@ -1611,3 +1611,99 @@ html {
     height: 140px;
   }
 }
+.program-hero h1 {
+  font-size: clamp(38px, 4.3vw, 62px);
+}
+.english-hero .photo-frame {
+  border-radius: 100px 6px 6px 6px;
+}
+.careers-hero .photo-frame {
+  border-radius: 6px 6px 100px 6px;
+}
+.careers-hero .photo-frame img {
+  object-position: 70% center;
+  transform: scale(1.13);
+}
+.program-copy {
+  max-width: 700px;
+  margin-top: 24px;
+}
+.career-paths {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+}
+.mentor-section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 70px;
+  border-top: 1px solid var(--border);
+}
+.mentor-section p {
+  margin-top: 18px;
+}
+.mentor-record {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 30px;
+}
+.mentor-record strong,
+.mentor-record span {
+  display: block;
+}
+.mentor-record strong {
+  color: var(--gold);
+  font-family: Manrope, sans-serif;
+  font-size: 24px;
+}
+.mentor-record p {
+  font-size: 11px;
+}
+.chooser h1 {
+  font-size: clamp(42px, 6vw, 72px);
+}
+.chooser h1 span,
+.chooser .path > svg {
+  color: var(--gold);
+}
+.chooser > p {
+  margin: 25px 0 40px;
+}
+.chooser .path h2 {
+  margin-top: 24px;
+  font-size: 30px;
+}
+@media (max-width: 800px) {
+  .career-paths,
+  .mentor-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .form-intro h2 {
+    font-size: 34px;
+  }
+  .chooser .nav span {
+    display: none;
+  }
+}
+.mentor-section > div,
+.mentor-record > div {
+  min-width: 0;
+}
+.mentor-record {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow-wrap: anywhere;
+}
+@media (max-width: 560px) {
+  .mentor-record {
+    grid-template-columns: 1fr;
+  }
+  .footer-top {
+    gap: 22px;
+  }
+  .footer-top > a:not(.brand) {
+    font-size: 12px;
+  }
+}

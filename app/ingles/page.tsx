@@ -1,9 +1,9 @@
-import { ProgramLanding } from "../../components/program-landing";
-import spec from "../../lib/programs.json";
+import { SalesLanding } from "../../components/sales-landing";
+import spec from "../../lib/sales-copy.json";
 export const metadata = {
-  ...spec.english_landing.seo,
-  openGraph: { ...spec.english_landing.seo, locale: "es_CR" },
+  ...spec.english_page.seo,
+  openGraph: { ...spec.english_page.seo, locale: "es_CR" },
 };
 export default function English() {
-  return <ProgramLanding program="english" />;
+  return <SalesLanding program="english" />;
 }

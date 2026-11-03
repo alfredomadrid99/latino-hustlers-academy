@@ -1730,3 +1730,74 @@ html {
     font-size: 12px;
   }
 }
+.sales-problem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+}
+.sales-problem p {
+  margin-bottom: 20px;
+}
+.sales-closing {
+  color: var(--text);
+  font-weight: 600;
+}
+.section-action {
+  margin-top: 30px;
+}
+.sales-final {
+  max-width: 900px;
+}
+.sales-final .button {
+  margin-top: 28px;
+}
+.sales-mentor-brief {
+  border-top: 1px solid var(--border);
+}
+.form-original-title {
+  margin-top: 35px;
+  line-height: 1.8;
+}
+.program-hero .button {
+  max-width: 100%;
+  white-space: normal;
+}
+.program-hero .button svg {
+  flex-shrink: 0;
+}
+.sales-agency h2 {
+  max-width: 880px;
+}
+.sales-hero .hero-description {
+  font-size: 14px;
+}
+@media (max-width: 800px) {
+  .sales-problem {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .chooser h1 {
+    max-width: 800px;
+  }
+  .hero-description {
+    max-width: 100%;
+  }
+  .nav-cta {
+    max-width: 190px;
+  }
+}
+@media (max-width: 560px) {
+  .program-hero h1 {
+    font-size: 38px;
+  }
+  .program-hero .button {
+    font-size: 11px;
+    padding: 14px 17px;
+  }
+  .nav-cta {
+    max-width: 160px;
+  }
+  .mentor-record strong {
+    font-size: 24px;
+  }
+}

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight, ArrowLeft, Check, ShieldCheck } from "lucide-react";
 import content from "../lib/content.json";
 import spec from "../lib/programs.json";
+import sales from "../lib/sales-copy.json";
 import {
   getSteps,
   getForm,
@@ -302,7 +303,9 @@ export function LeadForm({ program }: { program: Program }) {
               ? "Continuar"
               : failure
                 ? copy.submit_button.retry
-                : copy.submit_button.default}
+                : program === "english"
+                  ? sales.global_cta_system.english.form_submit
+                  : sales.global_cta_system.careers.form_submit}
           <ArrowRight size={17} />
         </button>
       </div>

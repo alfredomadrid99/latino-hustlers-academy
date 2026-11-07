@@ -34,79 +34,79 @@
   "english_page": {
     "seo": {
       "title": "Inglés en vivo en Costa Rica | Latino Hustlers Academy",
-      "description": "Aprendé inglés desde tu nivel actual, practicá conversaciones guiadas y preparate para buscar oportunidades remotas pagadas en dólares."
+      "description": "Practicá en vivo y preparate para buscar trabajo remoto en dólares."
     },
     "hero": {
       "eyebrow": "INGLÉS EN VIVO PARA TODO COSTA RICA",
-      "headline": "¿Sentís que podrías ganar más, pero el inglés te está frenando?",
-      "description": "Aprendé inglés desde tu nivel actual, practicá conversaciones guiadas y preparate para buscar oportunidades remotas pagadas en dólares.",
-      "primary_cta": "Quiero aprender inglés para trabajar remoto",
-      "secondary_cta": "Ver la oferta de los primeros 50"
+      "headline": "¿El inglés te frena para ganar más?",
+      "description": "Practicá en vivo y preparate para buscar trabajo remoto en dólares.",
+      "primary_cta": "Quiero aprender inglés",
+      "secondary_cta": "Ver la oferta"
     },
     "results": {
-      "headline": "Aprendé inglés para la próxima oportunidad que querés tomar.",
+      "headline": "Inglés para mejores oportunidades",
       "items": [
         {
           "title": "Animáte a hablar",
-          "description": "Practicá conversaciones guiadas en vivo para responder y expresarte con más confianza."
+          "description": "Ganá confianza con conversaciones guiadas."
         },
         {
-          "title": "Preparate para una entrevista en inglés",
-          "description": "Desarrollá el idioma para presentarte, hablar de lo que sabés hacer y entender preguntas en un contexto profesional."
+          "title": "Preparate para entrevistas",
+          "description": "Presentá tu experiencia y respondé en inglés."
         },
         {
-          "title": "Ampliá tus opciones de trabajo",
-          "description": "Construí una base para buscar oportunidades remotas donde el inglés te permita postularte y comunicarte con equipos o clientes internacionales."
+          "title": "Buscá trabajo remoto",
+          "description": "Postulate y comunicate con equipos internacionales."
         }
       ]
     },
     "modality": {
-      "headline": "Practicá en vivo, desde donde vivás.",
-      "description": "Conectate desde cualquier provincia de Costa Rica. Participá en conversaciones guiadas, hacé preguntas y practicá con profesores en tiempo real.",
-      "cta": "Quiero conocer el curso de inglés",
+      "headline": "Practicá en vivo desde donde vivás",
+      "description": "Conversá y hacé preguntas a tus profes desde cualquier provincia.",
+      "cta": "Conocé el curso",
       "video": null
     },
     "faq": [
       [
         "¿Puedo empezar si no hablo inglés?",
-        "Sí. Podés empezar desde nivel principiante. Indicá en el formulario cuánto inglés hablás hoy."
+        "Sí. Podés empezar desde cero."
       ],
       [
         "¿Desde dónde puedo conectarme?",
-        "Desde cualquiera de las siete provincias de Costa Rica. Las clases son virtuales y en vivo."
+        "Desde cualquiera de las siete provincias."
       ],
       [
         "¿Puedo registrar interés para un familiar?",
-        "Sí. Podés indicar si el programa sería para vos, para un familiar o para ambos."
+        "Sí. Podés registrarte para vos, un familiar o ambos."
       ],
       [
         "¿Cuándo empiezan las clases?",
-        "Registrá tu interés y podremos compartirte las fechas y los horarios cuando estén confirmados."
+        "Registrá tu interés para recibir las fechas cuando se confirmen."
       ]
     ],
     "final": {
-      "headline": "¿Qué oportunidad te gustaría poder aprovechar en inglés?",
-      "description": "Contanos desde qué nivel empezás y registrá tu interés en las clases virtuales.",
+      "headline": "Da el primer paso en inglés",
+      "description": "Contanos tu nivel y registrá tu interés.",
       "button": "Registrar mi interés en inglés"
     }
   },
   "careers_page": {
     "seo": {
       "title": "Carreras remotas en Costa Rica | Latino Hustlers Academy",
-      "description": "Convertí tu inglés en una ventaja profesional. Formate en asistencia virtual, gestión de proyectos o reclutamiento y aprendé a buscar tus primeras oportunidades remotas, aunque todavía no tengás experiencia en esas áreas."
+      "description": "Aprendé a ofrecer tus servicios a clientes de EE. UU., aunque empecés sin experiencia."
     },
     "hero": {
-      "eyebrow": "CARRERAS REMOTAS · FORMACIÓN VIRTUAL EN TODO COSTA RICA",
-      "headline": "¿Ya hablás inglés y seguís en un call center? Aprendé a ofrecer tus servicios a clientes de EE. UU.",
-      "description": "Convertí tu inglés en una ventaja profesional. Formate en asistencia virtual, gestión de proyectos o reclutamiento y aprendé a buscar tus primeras oportunidades remotas, aunque todavía no tengás experiencia en esas áreas.",
-      "primary_cta": "Quiero aprender a conseguir clientes remotos",
-      "secondary_cta": "Conocé la experiencia de Alberto"
+      "eyebrow": "CARRERAS REMOTAS · EN VIVO EN COSTA RICA",
+      "headline": "¿Ya hablás inglés y aun así seguís en un trabajo mal pagado?",
+      "description": "Aprendé a ofrecer tus servicios a clientes de EE. UU., aunque empecés sin experiencia.",
+      "primary_cta": "Quiero aprender a conseguir clientes",
+      "secondary_cta": "Conocé a Alberto"
     },
     "mentor": {
       "eyebrow": "CONOCÉ A TU COACH",
       "name": "Alberto Piñeres",
-      "headline": "De empezar sin experiencia a obtener la distinción Top Rated Plus en Upwork.",
-      "description": "Alberto construyó su trayectoria trabajando en inglés con clientes remotos. Después fundó ExclusiveAssist.com, un negocio dedicado a contratar asistentes virtuales.",
+      "headline": "Empezó de cero y llegó a Top Rated Plus en Upwork.",
+      "description": "Trabajó en inglés con clientes remotos y fundó ExclusiveAssist.com.",
       "proof": [
         {
           "value": "US$100.000+",
@@ -114,64 +114,64 @@
         },
         {
           "value": "37",
-          "label": "Trabajos registrados en su perfil de Upwork"
+          "label": "Trabajos en Upwork"
         },
         {
           "value": "US$360.000",
           "label": "Cifra anual reportada de ExclusiveAssist.com"
         }
       ],
-      "context": "Resultados de la trayectoria profesional de Alberto. Cada perfil y cada proyecto tienen condiciones distintas.",
+      "context": "Resultados de Alberto. Cada trayectoria es distinta.",
       "portrait": "/images/alberto-profile.jpeg",
       "upwork_screenshot": "/images/alberto-upwork.jpeg",
       "profile": null
     },
     "results": {
-      "headline": "Aprendé una habilidad que un cliente pueda contratar.",
-      "description": "Elegí el tipo de trabajo que querés aprender a hacer y preparate para presentarlo como un servicio profesional.",
+      "headline": "Ofrecé un servicio que te puedan contratar",
+      "description": "Elegí tu área.",
       "items": [
         {
           "title": "Asistencia virtual",
-          "description": "Preparate para ayudar a un negocio a organizar su operación y dar seguimiento a clientes y tareas."
+          "description": "Organizá operaciones y da seguimiento a clientes."
         },
         {
           "title": "Gestión de proyectos",
-          "description": "Desarrollá habilidades para coordinar equipos remotos y ayudar a que los proyectos avancen."
+          "description": "Coordiná equipos y proyectos remotos."
         },
         {
           "title": "Reclutamiento",
-          "description": "Aprendé a apoyar procesos de selección y conectar candidatos con las necesidades de un negocio."
+          "description": "Encontrá talento y apoyá procesos de selección."
         }
       ]
     },
     "upwork": {
-      "headline": "Aprendé a encontrar proyectos que sí encajen con tu perfil.",
-      "description": "Preparate para presentar tus servicios, construir un perfil profesional en Upwork, reconocer buenas oportunidades y postularte con más criterio.",
-      "supporting_line": "Cuando hay oportunidades compatibles, nuestra agencia puede conectar perfiles preparados con clientes de Estados Unidos.",
-      "cta": "Quiero preparar mi perfil para trabajar remoto"
+      "headline": "Encontrá proyectos que encajen con vos",
+      "description": "Armá tu perfil de Upwork, presentá tus servicios y postulate con criterio.",
+      "supporting_line": "Si hay una oportunidad compatible, nuestra agencia puede conectarte con clientes de EE. UU.",
+      "cta": "Quiero preparar mi perfil"
     },
     "video": null,
     "faq": [
       [
         "¿Qué estoy solicitando al registrarme?",
-        "Estás registrando tu interés en un programa de formación. Practicás habilidades profesionales para buscar oportunidades remotas."
+        "Estás registrando tu interés en la formación para trabajar remoto."
       ],
       [
         "¿Necesito experiencia en estas áreas?",
-        "Podés empezar sin experiencia en asistencia virtual, gestión de proyectos o reclutamiento. El programa está dirigido a personas que ya hablan inglés."
+        "Podés empezar sin experiencia en el área. Necesitás hablar inglés."
       ],
       [
         "¿Cómo se dan las clases?",
-        "Las clases son virtuales y en vivo. Podés conectarte desde cualquier provincia de Costa Rica, hacer preguntas y practicar en tiempo real."
+        "Son virtuales y en vivo, desde cualquier provincia."
       ],
       [
         "¿Cómo funciona la conexión con clientes?",
-        "La agencia puede conectar perfiles preparados con clientes de Estados Unidos cuando hay oportunidades compatibles."
+        "La agencia puede conectarte con clientes cuando haya una oportunidad compatible."
       ]
     ],
     "final": {
-      "headline": "Ya hablás inglés. Ahora elegí qué servicio querés aprender a ofrecer.",
-      "description": "Registrá tu interés y conocé cómo prepararte para buscar oportunidades remotas. El registro es para el programa de formación.",
+      "headline": "Ya hablás inglés. Elegí qué servicio ofrecer.",
+      "description": "Registrá tu interés en la formación.",
       "button": "Registrar mi interés en carreras remotas"
     }
   }

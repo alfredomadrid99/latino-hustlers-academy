@@ -105,16 +105,16 @@
     "mentor": {
       "eyebrow": "CONOCÉ A TU COACH",
       "name": "Alberto Piñeres",
-      "headline": "Empezó sin experiencia y superó los US$200.000 acumulados en Upwork.",
+      "headline": "De empezar sin experiencia a obtener la distinción Top Rated Plus en Upwork.",
       "description": "Alberto construyó su trayectoria trabajando en inglés con clientes remotos. Después fundó ExclusiveAssist.com, un negocio dedicado a contratar asistentes virtuales.",
       "proof": [
         {
-          "value": "US$200.000+",
+          "value": "US$100.000+",
           "label": "Acumulados en Upwork"
         },
         {
-          "value": "35+",
-          "label": "Trabajos completados, todos remotos y en inglés"
+          "value": "37",
+          "label": "Trabajos registrados en su perfil de Upwork"
         },
         {
           "value": "US$360.000",
@@ -122,7 +122,8 @@
         }
       ],
       "context": "Resultados de la trayectoria profesional de Alberto. Cada perfil y cada proyecto tienen condiciones distintas.",
-      "portrait": null,
+      "portrait": "/images/alberto-profile.jpeg",
+      "upwork_screenshot": "/images/alberto-upwork.jpeg",
       "profile": null
     },
     "results": {

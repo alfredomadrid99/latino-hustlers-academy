@@ -1896,6 +1896,27 @@ html {
   margin-top: 20px;
   border-radius: 8px;
 }
+.mentor-portrait {
+  width: min(100%, 260px);
+  height: auto;
+}
+.mentor-upwork {
+  margin-top: 20px;
+}
+.mentor-upwork a,
+.mentor-upwork img {
+  display: block;
+  border-radius: 8px;
+}
+.mentor-upwork img {
+  width: 100%;
+  height: auto;
+}
+.mentor-upwork figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
 .sales-offer {
   background: #efce7c;
 }

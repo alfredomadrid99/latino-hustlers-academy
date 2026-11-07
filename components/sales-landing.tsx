@@ -95,7 +95,8 @@ export function SalesLanding({
             Registrá tu interés <ArrowUpRight size={15} aria-hidden="true" />
           </a>
           <p>
-            El reloj es una guía para registrarte. El cupo se confirma con la matrícula.
+            El reloj es una guía para registrarte. El cupo se confirma con la
+            matrícula.
           </p>
         </aside>
       )}
@@ -192,6 +193,8 @@ export function SalesLanding({
                     className="mentor-portrait"
                     src={mentor.portrait}
                     alt={mentor.name}
+                    width={560}
+                    height={694}
                     loading="lazy"
                   />
                 )}
@@ -212,6 +215,24 @@ export function SalesLanding({
                   ))}
                 </dl>
                 <p className="section-note">{mentor.context}</p>
+                <figure className="mentor-upwork">
+                  <a
+                    href={mentor.upwork_screenshot}
+                    aria-label="Ver captura completa del perfil de Alberto en Upwork"
+                  >
+                    <img
+                      src={mentor.upwork_screenshot}
+                      alt="Perfil de Alberto en Upwork con US$100.000 o más en ingresos, 37 trabajos, 8.242 horas, 100% Job Success y la distinción Top Rated Plus."
+                      width={794}
+                      height={306}
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>
+                    Captura del perfil de Alberto en Upwork. Seleccioná la
+                    imagen para verla a tamaño completo.
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </section>

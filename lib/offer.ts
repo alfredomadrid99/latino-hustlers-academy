@@ -1,26 +1,25 @@
-type Price = { monthly: string; enrollment: string };
 type EnrollmentSnapshot = {
-  scope: "shared" | "per_program";
+  scope: "shared";
   confirmed: number;
 };
 
+export const regularPrice = { monthly: "₡34.900", enrollment: "₡19.000" };
+
 export const launchOffer = {
+  scope: "shared",
   limit: 50,
   monthly: "₡25.000",
   enrollment: "₡10.000",
-  title: "Oferta para los primeros 50 estudiantes",
+  title: "Oferta para los primeros 50 en matricularse",
   note: "Registrarte nos permite contactarte. El cupo promocional se confirma con la matrícula.",
   formNote:
     "Este formulario registra tu interés. La tarifa promocional se confirma al matricularte, según la disponibilidad de la oferta para los primeros 50 estudiantes.",
 };
 
-export function getOffer(
-  enrollments?: EnrollmentSnapshot,
-  regularPrice?: Price,
-) {
+export function getOffer(enrollments?: EnrollmentSnapshot) {
   // The caller must supply confirmed promotional enrollments for the authorized scope.
   const confirmed =
-    enrollments?.scope === "shared" || enrollments?.scope === "per_program"
+    enrollments?.scope === launchOffer.scope
       ? enrollments.confirmed
       : undefined;
   const remaining =
@@ -33,9 +32,7 @@ export function getOffer(
       closed: true,
       title: "La promoción de los primeros 50 estudiantes ya se completó",
       price: regularPrice,
-      note: regularPrice
-        ? "Registrá tu interés para recibir información sobre la matrícula."
-        : "Registrá tu interés para consultar el precio regular del programa.",
+      note: "Registrá tu interés para recibir información sobre la matrícula.",
       cta: "Registrar mi interés en el programa",
     };
   }

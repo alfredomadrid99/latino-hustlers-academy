@@ -3,14 +3,30 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import {
+  ArrowUpRight,
+  BriefcaseBusiness,
+  CalendarCheck,
+  ClipboardList,
+  Globe2,
+  Laptop,
+  Menu,
+  MessagesSquare,
+  Search,
+  UsersRound,
+  X,
+} from "lucide-react";
 import copy from "../lib/sales-copy.json";
 import spec from "../lib/programs.json";
-import { getOffer, launchOffer } from "../lib/offer";
+import { getOffer, launchOffer, regularPrice } from "../lib/offer";
 import { track } from "../lib/analytics";
 import type { Program } from "../lib/validation";
 import { Brand, Footer } from "./program-landing";
 import { LeadForm } from "./lead-form";
+import { OfferCountdown } from "./offer-countdown";
+
+const englishIcons = [MessagesSquare, BriefcaseBusiness, Globe2];
+const careersIcons = [ClipboardList, CalendarCheck, UsersRound];
 
 function ProgramVideo({ src, label }: { src: string | null; label: string }) {
   if (!src) return null;
@@ -41,6 +57,7 @@ export function SalesLanding({
     .header.cross_link;
   const { mentor, upwork } = copy.careers_page;
   const { modality } = copy.english_page;
+  const resultIcons = english ? englishIcons : careersIcons;
   const [menu, setMenu] = useState(false);
 
   useEffect(() => {
@@ -58,6 +75,30 @@ export function SalesLanding({
       <a className="skip" href="#contenido">
         Saltar al contenido
       </a>
+      {!offer.closed && (
+        <aside className="offer-banner" aria-label="Oferta de lanzamiento">
+          <div className="offer-banner-summary">
+            <strong>{launchOffer.title}</strong>
+            <span>
+              <span className="sr-only">Precio regular </span>
+              <s>
+                {regularPrice.monthly}/mes + {regularPrice.enrollment} matrícula
+              </s>
+              <span className="sr-only"> Precio promocional </span>
+              <b>
+                {launchOffer.monthly}/mes + {launchOffer.enrollment} matrícula
+              </b>
+            </span>
+          </div>
+          <OfferCountdown />
+          <a href={`#${form.anchor}`}>
+            Registrá tu interés <ArrowUpRight size={15} aria-hidden="true" />
+          </a>
+          <p>
+            El reloj es una guía para registrarte. El cupo se confirma con la matrícula.
+          </p>
+        </aside>
+      )}
       <header className="sales-header">
         <div className="container nav">
           <Brand lockup />
@@ -129,7 +170,7 @@ export function SalesLanding({
               alt={
                 english
                   ? "Persona practicando inglés en una videollamada"
-                  : "Dos escenas de trabajo en Costa Rica, en un call center y en una oficina en casa"
+                  : "Un trabajador estresado en un call center y una profesional relajada trabajando desde su casa en Costa Rica"
               }
               width={1120}
               height={840}
@@ -184,10 +225,24 @@ export function SalesLanding({
               </p>
               <h2>{offer.title}</h2>
               <p>{offer.note}</p>
+              {!offer.closed && (
+                <p className="offer-shared">
+                  Los 50 cupos se comparten entre Inglés y Carreras Remotas.
+                </p>
+              )}
             </div>
             <div className="sales-price">
               {offer.price && (
                 <>
+                  {!offer.closed && (
+                    <p className="sales-regular-price">
+                      Precio regular{" "}
+                      <s>
+                        {regularPrice.monthly} al mes +{" "}
+                        {regularPrice.enrollment} de matrícula
+                      </s>
+                    </p>
+                  )}
                   <p>
                     <strong>{offer.price.monthly}</strong> al mes
                     {!offer.closed && " durante todo el curso"}
@@ -211,33 +266,56 @@ export function SalesLanding({
               </p>
             )}
             <div className="career-paths">
-              {page.results.items.map(({ title, description }, i) => (
-                <article className="sales-result" key={title}>
-                  <span className="eyebrow">0{i + 1}</span>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                </article>
-              ))}
+              {page.results.items.map(({ title, description }, i) => {
+                const Icon = resultIcons[i];
+                return (
+                  <article className="sales-result" key={title}>
+                    <span className="sales-result-icon">
+                      <Icon size={30} strokeWidth={1.7} aria-hidden="true" />
+                    </span>
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {english ? (
-          <section className="container section sales-agency" id="modalidad">
-            <h2>{modality.headline}</h2>
-            <p className="program-copy">{modality.description}</p>
-            <ProgramVideo
-              src={modality.video}
-              label="Modalidad del curso de inglés"
-            />
-            <div className="section-action">{action(modality.cta)}</div>
+          <section
+            className="container section sales-agency sales-illustrated"
+            id="modalidad"
+          >
+            <div>
+              <h2>{modality.headline}</h2>
+              <p className="program-copy">{modality.description}</p>
+              <ProgramVideo
+                src={modality.video}
+                label="Modalidad del curso de inglés"
+              />
+              <div className="section-action">{action(modality.cta)}</div>
+            </div>
+            <div className="sales-illustration" aria-hidden="true">
+              <Laptop size={112} strokeWidth={1.15} />
+              <MessagesSquare size={48} strokeWidth={1.5} />
+            </div>
           </section>
         ) : (
-          <section className="container section sales-agency" id="upwork">
-            <h2>{upwork.headline}</h2>
-            <p className="program-copy">{upwork.description}</p>
-            <p className="program-copy">{upwork.supporting_line}</p>
-            <div className="section-action">{action(upwork.cta)}</div>
+          <section
+            className="container section sales-agency sales-illustrated"
+            id="upwork"
+          >
+            <div>
+              <h2>{upwork.headline}</h2>
+              <p className="program-copy">{upwork.description}</p>
+              <p className="program-copy">{upwork.supporting_line}</p>
+              <div className="section-action">{action(upwork.cta)}</div>
+            </div>
+            <div className="sales-illustration" aria-hidden="true">
+              <Globe2 size={112} strokeWidth={1.15} />
+              <Search size={48} strokeWidth={1.5} />
+            </div>
           </section>
         )}
 

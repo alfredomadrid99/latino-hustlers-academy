@@ -2025,3 +2025,190 @@ html {
     grid-template-columns: 1fr;
   }
 }
+
+.offer-banner {
+  display: grid;
+  grid-template-columns: minmax(0, auto) auto auto;
+  gap: 8px 24px;
+  padding-block: 14px 10px;
+  line-height: 1.4;
+}
+.offer-banner-summary {
+  display: grid;
+  gap: 3px;
+  text-align: left;
+}
+.offer-banner-summary strong {
+  font-size: clamp(15px, 2vw, 19px);
+  font-weight: 800;
+}
+.offer-banner-summary s {
+  margin-right: 10px;
+}
+.offer-banner-summary b {
+  display: inline-block;
+}
+.offer-banner > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #14243b;
+  color: #fffdf7;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-weight: 700;
+}
+.offer-banner > p {
+  grid-column: 1 / -1;
+  color: #362b10;
+  font-size: 11px;
+}
+.offer-banner a:focus-visible {
+  outline-color: #14243b;
+}
+.offer-countdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+}
+.offer-clock {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 19px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.sales-header .nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 12px;
+  height: 110px;
+}
+.sales-header .brand-lockup {
+  grid-column: 2;
+  grid-row: 1;
+}
+.sales-header nav {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  gap: clamp(10px, 1.6vw, 24px);
+}
+.sales-header .nav-cta,
+.sales-header .menu-button {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+}
+.sales-header .brand-logo {
+  width: 92px;
+  height: 92px;
+}
+.sales-header .brand-name {
+  font-size: 21px;
+}
+.sales-regular-price {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.sales-regular-price s {
+  text-decoration-thickness: 2px;
+}
+.offer-shared {
+  margin-top: 8px;
+  font-weight: 600;
+}
+.sales-result-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  color: #735010;
+  background: #f5e7c6;
+  border: 1px solid #ead3a1;
+  border-radius: 14px;
+}
+.sales-result h3 {
+  margin-top: 18px;
+  font-weight: 800;
+}
+.sales-illustrated {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 32%);
+  align-items: center;
+  gap: clamp(24px, 6vw, 76px);
+}
+.sales-illustration {
+  display: grid;
+  position: relative;
+  place-items: center;
+  min-height: 200px;
+  color: var(--gold);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: radial-gradient(circle at 50% 55%, #294062, #16253e 70%);
+}
+.sales-illustration svg + svg {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  padding: 8px;
+  background: #14243b;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+@media (max-width: 800px) {
+  .offer-banner {
+    grid-template-columns: minmax(0, auto) auto;
+    gap: 8px 16px;
+  }
+  .offer-banner-summary {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  .sales-header .nav {
+    height: 100px;
+  }
+  .sales-header nav {
+    top: 100px;
+  }
+  .sales-header .nav-cta {
+    display: none;
+  }
+  .sales-header .brand-logo {
+    width: 76px;
+    height: 76px;
+  }
+  .sales-header .brand-name {
+    font-size: 17px;
+  }
+}
+@media (max-width: 560px) {
+  .offer-banner {
+    padding-inline: 12px;
+    column-gap: 10px;
+  }
+  .offer-countdown {
+    font-size: 11px;
+    max-width: 170px;
+  }
+  .offer-banner > a {
+    white-space: nowrap;
+  }
+  .sales-header .brand-name {
+    white-space: nowrap;
+  }
+  .sales-header .nav {
+    gap: 4px;
+  }
+  .sales-illustrated {
+    grid-template-columns: 1fr;
+  }
+  .sales-illustration {
+    min-height: 160px;
+  }
+}

@@ -3,20 +3,25 @@
 
 import Link from "next/link";
 
-export function Brand() {
+export function Brand({ lockup = false }: { lockup?: boolean }) {
   return (
     <Link
       href="/"
-      className="brand"
+      className={lockup ? "brand brand-lockup" : "brand"}
       aria-label="Latino Hustlers Academy, inicio"
     >
       <img
         className="brand-logo"
         src="/images/latino-hustlers-logo.png"
-        alt="Latino Hustlers Academy"
+        alt={lockup ? "" : "Latino Hustlers Academy"}
         width={1254}
         height={1254}
       />
+      {lockup && (
+        <span className="brand-name">
+          Latino Hustlers<small>Academy</small>
+        </span>
+      )}
     </Link>
   );
 }

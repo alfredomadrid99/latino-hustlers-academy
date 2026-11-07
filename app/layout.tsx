@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { launchOffer } from "../lib/offer";
 
 export const metadata: Metadata = {
   title: "Latino Hustlers Academy | Inglés y habilidades remotas",
@@ -32,12 +31,6 @@ export default function RootLayout({
   return (
     <html lang="es-CR">
       <body className="antialiased">
-        <aside className="offer-banner" aria-label="Oferta de lanzamiento">
-          <strong>{launchOffer.title}</strong>
-          <span>
-            {launchOffer.monthly} al mes · Matrícula de {launchOffer.enrollment}
-          </span>
-        </aside>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

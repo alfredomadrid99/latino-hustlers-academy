@@ -1,88 +1,11 @@
 {
-  "task": "Reescribir el copy de todas las páginas existentes de Latino Hustlers Academy para aumentar su fuerza comercial, claridad y conversión.",
-  "scope": {
-    "pages": [
-      "/",
-      "/ingles",
-      "/carreras-remotas"
-    ],
-    "execution": "Implementá los cambios directamente en el proyecto existente.",
-    "priority": "Este documento reemplaza el copy comercial anterior. Conservá la arquitectura de dos landing pages independientes y sus respectivos formularios.",
-    "preserve": [
-      "Preguntas, respuestas, precios y lógica de ambos formularios.",
-      "Confirmación obligatoria de que carreras remotas es formación y no una oferta laboral.",
-      "Bloqueo de envío para quienes seleccionan que solo buscan trabajo.",
-      "Integraciones, almacenamiento y seguimiento de conversiones existentes.",
-      "Mensajes finales de ambos formularios.",
-      "Identidad visual elegante en negro, dorado y blanco."
-    ]
-  },
-  "copy_direction": {
-    "language": "Español de Costa Rica con voseo.",
-    "tone": "Directo, persuasivo, ambicioso y orientado a la acción. Más parecido a una página de ventas que a un catálogo académico.",
-    "strategy": [
-      "Abrir con un problema reconocible y presentar una posibilidad concreta de progreso.",
-      "Conectar características con beneficios prácticos.",
-      "Usar frases cortas, verbos activos y encabezados memorables.",
-      "Hablar directamente a la persona usando vos y tu.",
-      "Diferenciar claramente aprender inglés de desarrollar habilidades profesionales.",
-      "Presentar el registro como el siguiente paso para recibir información, no como matrícula confirmada.",
-      "Usar la trayectoria de Alberto como evidencia de experiencia, sin convertirla en una promesa para estudiantes.",
-      "Distribuir CTAs después de los principales argumentos de venta.",
-      "Mantener aclaraciones importantes visibles y breves, sin repetirlas en cada sección."
-    ],
-    "ad_hooks_to_adapt": [
-      "¿No ganás lo suficiente?",
-      "El inglés es lo que te falta.",
-      "¿Sabés inglés y seguís trabajando en un call center?",
-      "No necesitás un título universitario para empezar a desarrollar habilidades remotas.",
-      "Trabajá desde Costa Rica con clientes de Estados Unidos.",
-      "Aprendé inglés desde cero.",
-      "Convertí tu inglés en una ventaja profesional.",
-      "Registrá tu interés."
-    ],
-    "boundaries": [
-      "No afirmar que el inglés es la única causa de los ingresos de una persona.",
-      "No prometer salarios específicos, empleo, clientes ni resultados garantizados.",
-      "No usar los montos de ingresos de los anuncios como resultados esperados del estudiante.",
-      "No desacreditar estudios universitarios ni afirmar que estudiar una carrera es perder el tiempo.",
-      "No inventar escasez, descuentos, fechas límite o cupos.",
-      "No usar Inscribirme, Reservar mi cupo o Comenzar hoy si la acción solo registra interés.",
-      "No presentar como abierta una convocatoria que sigue en evaluación.",
-      "No agregar beneficios no confirmados, como certificaciones, grabaciones o prácticas pagadas."
-    ]
-  },
   "global_cta_system": {
-    "rules": [
-      "Cada botón debe indicar claramente el interés específico del usuario.",
-      "Usar un CTA principal dominante por sección.",
-      "Los CTAs principales deben desplazarse al formulario de la misma landing.",
-      "Usar un enlace secundario visualmente más discreto para explorar contenido.",
-      "No reemplazar todos los botones por textos genéricos como Más información.",
-      "Mantener etiquetas cortas y legibles en móvil.",
-      "El botón final del formulario debe describir el envío de interés, no prometer una inscripción."
-    ],
     "english": {
-      "primary": "Quiero aprender inglés",
-      "secondary": "Ver cómo funciona",
-      "investment": "Me interesa este programa",
-      "final_section": "Quiero dar el primer paso",
-      "form_submit": "Enviar mi interés en inglés",
-      "destination": "#formulario-ingles",
-      "microcopy": "Registrá tu interés para recibir información si avanzamos con la apertura."
+      "form_submit": "Enviar mi interés en inglés"
     },
     "careers": {
-      "primary": "Quiero prepararme para trabajar remoto",
-      "compact_primary": "Quiero formarme",
-      "secondary": "Explorar las áreas",
-      "mentor": "Quiero desarrollar estas habilidades",
-      "investment": "Me interesa el programa",
-      "final_section": "Quiero dar mi siguiente paso",
-      "form_submit": "Enviar mi interés en carreras remotas",
-      "destination": "#formulario-carreras",
-      "microcopy": "Es una formación profesional, no una oferta de trabajo."
-    },
-    "mobile": "Si existe una barra fija de CTA, usar el CTA específico de cada programa y asegurar que no tape contenido, controles ni mensajes."
+      "form_submit": "Enviar mi interés en carreras remotas"
+    }
   },
   "home_page": {
     "route": "/",
@@ -109,281 +32,146 @@
     "location_line": "Desde Costa Rica. Con preparación para un mundo de posibilidades."
   },
   "english_page": {
-    "route": "/ingles",
     "seo": {
-      "title": "Aprendé inglés desde cero | Latino Hustlers Academy",
-      "description": "Que el inglés deje de ser una barrera. Registrá tu interés en clases virtuales en vivo de Latino Hustlers Academy, desde principiante hasta avanzado."
+      "title": "Inglés en vivo en Costa Rica | Latino Hustlers Academy",
+      "description": "Aprendé inglés desde tu nivel actual, practicá conversaciones guiadas y preparate para buscar oportunidades remotas pagadas en dólares."
     },
     "hero": {
-      "eyebrow": "INGLÉS DESDE CERO · CLASES VIRTUALES EN VIVO",
-      "headline": "Que el inglés no te siga cerrando puertas.",
-      "description": "¿Querés explorar nuevas oportunidades, pero el idioma te frena? Aprendé inglés desde tu nivel actual, practicá con profesores en vivo y empezá a construir una herramienta para tu futuro.",
-      "primary_cta": "Quiero aprender inglés",
-      "secondary_cta": "Ver cómo funciona",
-      "benefits": [
-        "Podés empezar sin hablar inglés.",
-        "Interactuá y practicá en tiempo real.",
-        "Estudiá desde donde estés."
-      ],
-      "status": "Estamos evaluando la apertura del programa en Pérez Zeledón."
+      "eyebrow": "INGLÉS EN VIVO PARA TODO COSTA RICA",
+      "headline": "¿Sentís que podrías ganar más, pero el inglés te está frenando?",
+      "description": "Aprendé inglés desde tu nivel actual, practicá conversaciones guiadas y preparate para buscar oportunidades remotas pagadas en dólares.",
+      "primary_cta": "Quiero aprender inglés para trabajar remoto",
+      "secondary_cta": "Ver la oferta de los primeros 50"
     },
-    "problem_section": {
-      "eyebrow": "DEJÁ DE POSTERGARLO",
-      "headline": "¿Cuántas veces dijiste «necesito aprender inglés»?",
-      "paragraphs": [
-        "Ves una oportunidad, leés los requisitos y aparece la misma barrera: el inglés.",
-        "Tal vez lo intentaste antes. Tal vez nunca empezaste porque pensaste que era demasiado tarde o que primero necesitabas saber lo básico.",
-        "No necesitás llegar sabiendo. Necesitás encontrar una formación que te permita empezar desde tu punto de partida."
-      ],
-      "closing_line": "Empezá por desarrollar la habilidad que hoy te está haciendo falta.",
-      "cta": "Quiero empezar desde mi nivel"
-    },
-    "benefits_section": {
-      "headline": "No se trata solo de aprender palabras. Se trata de poder usarlas.",
+    "results": {
+      "headline": "Aprendé inglés para la próxima oportunidad que querés tomar.",
       "items": [
         {
-          "title": "Dejá de depender de adivinar",
-          "description": "Desarrollá comprensión para desenvolverte mejor en situaciones donde el inglés está presente."
+          "title": "Animáte a hablar",
+          "description": "Practicá conversaciones guiadas en vivo para responder y expresarte con más confianza."
         },
         {
-          "title": "Practicá para comunicarte",
-          "description": "Hacé preguntas, participá y practicá en vivo con profesores."
+          "title": "Preparate para una entrevista en inglés",
+          "description": "Desarrollá el idioma para presentarte, hablar de lo que sabés hacer y entender preguntas en un contexto profesional."
         },
         {
-          "title": "Construí una base para nuevas posibilidades",
-          "description": "Preparate para seguir avanzando hacia objetivos personales y profesionales donde el idioma puede marcar una diferencia."
-        },
-        {
-          "title": "Empezá donde estás",
-          "description": "Registrá tu interés aunque hoy no hablés nada de inglés."
+          "title": "Ampliá tus opciones de trabajo",
+          "description": "Construí una base para buscar oportunidades remotas donde el inglés te permita postularte y comunicarte con equipos o clientes internacionales."
         }
       ]
     },
-    "modality_section": {
-      "headline": "En línea no tiene que significar aprender por tu cuenta.",
-      "description": "La propuesta contempla clases 100% virtuales y en vivo: profesores con quienes podés interactuar, hacer preguntas y practicar en tiempo real.",
-      "supporting_line": "Una forma de aprender que combina acceso desde casa con interacción humana.",
-      "cta": "Quiero conocer las clases"
+    "modality": {
+      "headline": "Practicá en vivo, desde donde vivás.",
+      "description": "Conectate desde cualquier provincia de Costa Rica. Participá en conversaciones guiadas, hacé preguntas y practicá con profesores en tiempo real.",
+      "cta": "Quiero conocer el curso de inglés",
+      "video": null
     },
-    "audience_section": {
-      "headline": "Este puede ser tu punto de partida si…",
-      "items": [
-        "No hablás inglés y querés empezar desde cero.",
-        "Sabés lo básico, pero querés seguir avanzando.",
-        "Querés desarrollar el idioma para tus próximos objetivos.",
-        "Buscás una opción de formación para vos o un familiar."
+    "faq": [
+      [
+        "¿Puedo empezar si no hablo inglés?",
+        "Sí. Podés empezar desde nivel principiante. Indicá en el formulario cuánto inglés hablás hoy."
+      ],
+      [
+        "¿Desde dónde puedo conectarme?",
+        "Desde cualquiera de las siete provincias de Costa Rica. Las clases son virtuales y en vivo."
+      ],
+      [
+        "¿Puedo registrar interés para un familiar?",
+        "Sí. Podés indicar si el programa sería para vos, para un familiar o para ambos."
+      ],
+      [
+        "¿Cuándo empiezan las clases?",
+        "Registrá tu interés y podremos compartirte las fechas y los horarios cuando estén confirmados."
       ]
-    },
-    "mentor_section": {
-      "headline": "El inglés también puede ser una herramienta profesional.",
-      "description": "Alberto Piñeres, mentor de Latino Hustlers Academy, desarrolló su trayectoria trabajando de forma remota y en inglés. Su experiencia muestra una de las formas en que el idioma puede utilizarse en un entorno profesional.",
-      "instruction": "Mantener esta sección breve. No presentarlo como profesor de inglés ni sugerir que sus resultados corresponden a estudiantes de este programa."
-    },
-    "investment_section": {
-      "eyebrow": "CONOCÉ LA PROPUESTA",
-      "headline": "Dale a tu interés un siguiente paso.",
-      "description": "Estamos evaluando una propuesta de formación de inglés con la siguiente inversión:",
-      "monthly_price": "₡34.900",
-      "monthly_label": "mensuales",
-      "enrollment_fee": "Matrícula única de ₡19.000",
-      "cta": "Me interesa este programa",
-      "microcopy": "Registrarte no implica pagar ni confirma una matrícula.",
-      "status_note": "Apertura en evaluación. Las condiciones, fechas y horarios se comunicarán si avanzamos con el lanzamiento."
-    },
-    "faq_direction": {
-      "instruction": "Conservar las respuestas correctas del sitio y reescribirlas de forma más directa. Priorizar las objeciones sobre empezar desde cero, modalidad, precio, familiares y estado de apertura.",
-      "avoid": "No inventar duración, resultados por nivel o velocidad de aprendizaje."
-    },
-    "final_cta_section": {
-      "headline": "El inglés que querés hablar empieza con una decisión.",
-      "description": "Contanos tu nivel y tu interés. Si avanzamos con la apertura, podremos compartirte cómo empezar.",
-      "cta": "Quiero dar el primer paso",
-      "microcopy": "Podés registrar tu interés aunque hoy no hablés inglés."
-    },
-    "form_wrapper": {
-      "headline": "Tu primer paso empieza acá.",
-      "description": "Completá el formulario y contanos para quién sería el programa y desde qué nivel empezaría.",
-      "instruction": "Conservar intactos el título, introducción, preguntas, opciones y mensaje final del formulario previamente definido. Este texto pertenece al bloque exterior."
+    ],
+    "final": {
+      "headline": "¿Qué oportunidad te gustaría poder aprovechar en inglés?",
+      "description": "Contanos desde qué nivel empezás y registrá tu interés en las clases virtuales.",
+      "button": "Registrar mi interés en inglés"
     }
   },
   "careers_page": {
-    "route": "/carreras-remotas",
     "seo": {
-      "title": "Convertí tu inglés en una ventaja profesional | Latino Hustlers Academy",
-      "description": "Desarrollá habilidades de asistencia virtual, gestión de proyectos y reclutamiento para prepararte para oportunidades remotas con clientes internacionales."
+      "title": "Carreras remotas en Costa Rica | Latino Hustlers Academy",
+      "description": "Convertí tu inglés en una ventaja profesional. Formate en asistencia virtual, gestión de proyectos o reclutamiento y aprendé a buscar tus primeras oportunidades remotas, aunque todavía no tengás experiencia en esas áreas."
     },
     "hero": {
-      "eyebrow": "INGLÉS + HABILIDADES PROFESIONALES + VISIÓN INTERNACIONAL",
-      "headline": "¿Ya hablás inglés? No dejés que tu próximo paso se quede en un call center.",
-      "description": "Convertí tu inglés en una ventaja profesional. Desarrollá habilidades de asistencia virtual, gestión de proyectos o reclutamiento y preparate para ofrecer servicios a clientes de Estados Unidos.",
-      "primary_cta": "Quiero prepararme para trabajar remoto",
-      "secondary_cta": "Explorar las áreas",
-      "benefits": [
-        "Propuesta de formación de 5 meses.",
-        "Clases virtuales en vivo.",
-        "Aprendizaje práctico y acompañamiento."
-      ],
-      "clarification": "Es un programa de formación. No es una oferta de empleo ni garantiza contratación."
+      "eyebrow": "CARRERAS REMOTAS · FORMACIÓN VIRTUAL EN TODO COSTA RICA",
+      "headline": "¿Ya hablás inglés y seguís en un call center? Aprendé a ofrecer tus servicios a clientes de EE. UU.",
+      "description": "Convertí tu inglés en una ventaja profesional. Formate en asistencia virtual, gestión de proyectos o reclutamiento y aprendé a buscar tus primeras oportunidades remotas, aunque todavía no tengás experiencia en esas áreas.",
+      "primary_cta": "Quiero aprender a conseguir clientes remotos",
+      "secondary_cta": "Conocé la experiencia de Alberto"
     },
-    "problem_section": {
-      "headline": "Hablar inglés es una ventaja. Saber qué hacer con él es el siguiente paso.",
-      "paragraphs": [
-        "Ya invertiste tiempo en aprender el idioma. Ahora querés saber cómo utilizarlo para desarrollar un perfil profesional con más posibilidades.",
-        "Pero hablar inglés, por sí solo, no te enseña a gestionar un proyecto, apoyar la operación de un negocio, reclutar talento o presentar tus servicios a un cliente.",
-        "Ahí es donde empieza la preparación profesional."
-      ],
-      "closing_line": "Sumale habilidades concretas al inglés que ya tenés.",
-      "cta": "Quiero desarrollar esas habilidades"
-    },
-    "career_areas_section": {
-      "headline": "No vendás solo tu tiempo. Aprendé a ofrecer un servicio.",
-      "description": "Explorá áreas donde la organización, la comunicación y el manejo de herramientas digitales forman parte del trabajo diario.",
-      "items": [
-        {
-          "title": "Asistencia virtual",
-          "hook": "Convertí tu organización en apoyo para un negocio.",
-          "description": "Aprendé a gestionar agendas, correos, tareas y comunicación para apoyar la operación de clientes."
-        },
-        {
-          "title": "Gestión de proyectos",
-          "hook": "Aprendé a convertir pendientes en procesos.",
-          "description": "Desarrollá habilidades para organizar tareas, coordinar equipos y dar seguimiento a proyectos."
-        },
-        {
-          "title": "Reclutamiento y recursos humanos",
-          "hook": "Preparate para conectar talento con necesidades reales.",
-          "description": "Conocé herramientas para buscar candidatos, coordinar entrevistas y apoyar procesos de selección."
-        }
-      ],
-      "cta": "Quiero encontrar mi área"
-    },
-    "practical_training_section": {
-      "headline": "Menos quedarte pensando «¿cómo empiezo?». Más preparación para dar el paso.",
-      "items": [
-        {
-          "title": "Conocé las herramientas",
-          "description": "Aprendé sobre herramientas y procesos utilizados en entornos de trabajo remoto."
-        },
-        {
-          "title": "Practicá con acompañamiento",
-          "description": "Participá en ejercicios, hacé preguntas y desarrollá habilidades con instructores en vivo."
-        },
-        {
-          "title": "Aprendé a presentar tus servicios",
-          "description": "Conocé plataformas como Upwork y Fiverr y fundamentos de comunicación y gestión de clientes."
-        },
-        {
-          "title": "Construí tu siguiente etapa",
-          "description": "Prepará tu perfil para buscar oportunidades con mayor claridad sobre lo que podés ofrecer."
-        }
-      ],
-      "degree_note": "No necesitás un título universitario para registrar tu interés. Sí necesitás disposición para aprender y desarrollar habilidades.",
-      "cta": "Quiero conocer la formación"
-    },
-    "mentor_section": {
-      "eyebrow": "CONOCÉ A TU MENTOR",
+    "mentor": {
+      "eyebrow": "CONOCÉ A TU COACH",
       "name": "Alberto Piñeres",
-      "headline": "Empezó desde cero. Superó los US$200.000 en Upwork.",
-      "description": "Sin título universitario y sin experiencia previa al comenzar, Alberto desarrolló una trayectoria de trabajo remoto en inglés y fundó ExclusiveAssist.com.",
-      "proof_points": [
+      "headline": "Empezó sin experiencia y superó los US$200.000 acumulados en Upwork.",
+      "description": "Alberto construyó su trayectoria trabajando en inglés con clientes remotos. Después fundó ExclusiveAssist.com, un negocio dedicado a contratar asistentes virtuales.",
+      "proof": [
         {
           "value": "US$200.000+",
-          "label": "Generados de forma acumulada en Upwork"
-        },
-        {
-          "value": "Top 1%",
-          "label": "De freelancers a nivel mundial"
+          "label": "Acumulados en Upwork"
         },
         {
           "value": "35+",
-          "label": "Trabajos completados, remotos y en inglés"
+          "label": "Trabajos completados, todos remotos y en inglés"
         },
         {
-          "value": "US$360.000 al año",
-          "label": "Cifra reportada del negocio ExclusiveAssist.com"
+          "value": "US$360.000",
+          "label": "Cifra anual reportada de ExclusiveAssist.com"
         }
       ],
-      "closing_line": "Conocé una formación acompañada por experiencia en servicios remotos y gestión de un negocio.",
-      "cta": "Quiero desarrollar estas habilidades",
-      "notes": [
-        "Trayectoria y cifras proporcionadas por Latino Hustlers Academy.",
-        "Los resultados del mentor son individuales y no representan resultados garantizados para estudiantes."
-      ],
-      "accuracy_rules": [
-        "No convertir US$200.000 acumulados en ingresos anuales.",
-        "No presentar US$360.000 como ganancia neta o ingreso personal.",
-        "No usar un badge oficial de Upwork para representar el Top 1% sin respaldo específico.",
-        "No inventar testimonios, capturas de ingresos o fotografías del mentor."
+      "context": "Resultados de la trayectoria profesional de Alberto. Cada perfil y cada proyecto tienen condiciones distintas.",
+      "portrait": null,
+      "profile": null
+    },
+    "results": {
+      "headline": "Aprendé una habilidad que un cliente pueda contratar.",
+      "description": "Elegí el tipo de trabajo que querés aprender a hacer y preparate para presentarlo como un servicio profesional.",
+      "items": [
+        {
+          "title": "Asistencia virtual",
+          "description": "Preparate para ayudar a un negocio a organizar su operación y dar seguimiento a clientes y tareas."
+        },
+        {
+          "title": "Gestión de proyectos",
+          "description": "Desarrollá habilidades para coordinar equipos remotos y ayudar a que los proyectos avancen."
+        },
+        {
+          "title": "Reclutamiento",
+          "description": "Aprendé a apoyar procesos de selección y conectar candidatos con las necesidades de un negocio."
+        }
       ]
     },
-    "agency_section": {
-      "headline": "No solo hablamos de clientes internacionales. También trabajamos con ellos.",
-      "description": "Además de la academia, contamos con una agencia que puede conectar perfiles preparados con clientes de Estados Unidos cuando existen oportunidades compatibles.",
-      "supporting_line": "La formación busca acercarte a habilidades y necesidades del entorno profesional.",
-      "clarification": "La conexión depende de tu perfil, nivel de inglés, preparación y oportunidades disponibles. No garantiza clientes ni contratación.",
-      "cta": "Quiero preparar mi perfil"
+    "upwork": {
+      "headline": "Aprendé a encontrar proyectos que sí encajen con tu perfil.",
+      "description": "Preparate para presentar tus servicios, construir un perfil profesional en Upwork, reconocer buenas oportunidades y postularte con más criterio.",
+      "supporting_line": "Cuando hay oportunidades compatibles, nuestra agencia puede conectar perfiles preparados con clientes de Estados Unidos.",
+      "cta": "Quiero preparar mi perfil para trabajar remoto"
     },
-    "investment_section": {
-      "eyebrow": "INVERTÍ EN TU PREPARACIÓN",
-      "headline": "Tu inglés ya es un punto de partida. Ahora sumale dirección.",
-      "description": "Conocé la propuesta de formación en carreras remotas:",
-      "duration": "5 meses",
-      "monthly_price": "₡39.000",
-      "monthly_label": "mensuales",
-      "enrollment_fee": "Matrícula única de ₡20.000",
-      "cta": "Me interesa el programa",
-      "microcopy": "Registrarte no implica pagar ni confirma una matrícula.",
-      "status_note": "Programa en evaluación de apertura. Condiciones, contenido, fechas y horarios sujetos a confirmación.",
-      "separation_note": "Esta propuesta corresponde a carreras remotas. El programa de inglés se informa por separado."
-    },
-    "faq_direction": {
-      "instruction": "Responder objeciones con claridad y seguridad, manteniendo la información existente sobre experiencia previa, nivel de inglés, inversión, modalidad, clientes y naturaleza educativa.",
-      "priority_question": {
-        "question": "¿Esto es un curso o una oferta de trabajo?",
-        "answer": "Es un programa de formación. Te preparamos para desarrollar habilidades y explorar oportunidades remotas. No estás aplicando a un empleo y no se garantiza contratación."
-      }
-    },
-    "final_cta_section": {
-      "headline": "Ya tenés una meta. Empezá a preparar el camino.",
-      "description": "Si querés dejar de investigar sin dirección y conocer una formación para desarrollar habilidades remotas, registrá tu interés.",
-      "cta": "Quiero dar mi siguiente paso",
-      "microcopy": "Recibí información si avanzamos con la apertura. Formación profesional, no oferta laboral."
-    },
-    "form_wrapper": {
-      "headline": "Contanos qué querés construir con tu inglés.",
-      "description": "Completá el formulario para registrar tu interés en la formación y ayudarnos a conocer tus objetivos.",
-      "instruction": "Conservar intactos el título, introducción, preguntas, opciones, confirmación laboral y mensaje final del formulario previamente definido. Este texto pertenece al bloque exterior."
+    "video": null,
+    "faq": [
+      [
+        "¿Qué estoy solicitando al registrarme?",
+        "Estás registrando tu interés en un programa de formación. Practicás habilidades profesionales para buscar oportunidades remotas."
+      ],
+      [
+        "¿Necesito experiencia en estas áreas?",
+        "Podés empezar sin experiencia en asistencia virtual, gestión de proyectos o reclutamiento. El programa está dirigido a personas que ya hablan inglés."
+      ],
+      [
+        "¿Cómo se dan las clases?",
+        "Las clases son virtuales y en vivo. Podés conectarte desde cualquier provincia de Costa Rica, hacer preguntas y practicar en tiempo real."
+      ],
+      [
+        "¿Cómo funciona la conexión con clientes?",
+        "La agencia puede conectar perfiles preparados con clientes de Estados Unidos cuando hay oportunidades compatibles."
+      ]
+    ],
+    "final": {
+      "headline": "Ya hablás inglés. Ahora elegí qué servicio querés aprender a ofrecer.",
+      "description": "Registrá tu interés y conocé cómo prepararte para buscar oportunidades remotas. El registro es para el programa de formación.",
+      "button": "Registrar mi interés en carreras remotas"
     }
-  },
-  "conversion_and_layout": {
-    "instructions": [
-      "Adaptar los bloques existentes a esta secuencia comercial sin reconstruir innecesariamente toda la aplicación.",
-      "Hacer que el headline y CTA principal sean visibles con rapidez en móvil.",
-      "Destacar una frase clave por sección, sin colorear párrafos completos.",
-      "Presentar beneficios antes de entrar en detalles técnicos.",
-      "Ubicar el precio con suficiente claridad antes del formulario.",
-      "Repetir CTAs después de beneficios, trayectoria e inversión, sin saturar cada bloque.",
-      "Usar el microcopy para aclarar qué sucede después del clic o envío.",
-      "Mantener accesible y legible la aclaración de formación frente a empleo.",
-      "No usar popups que interrumpan la lectura ni falsas notificaciones de inscripciones.",
-      "Si el nuevo copy exige ajustes de espaciado o tamaño de texto, hacerlos para evitar bloques densos y botones desbordados."
-    ]
-  },
-  "verification": [
-    "Ambas páginas tienen hooks diferentes y específicos para su público.",
-    "Los CTAs principales llevan al formulario correcto.",
-    "Ningún botón promete reservar un cupo o conseguir un empleo.",
-    "Se conservaron las preguntas y respuestas de los dos formularios.",
-    "Solo cambió el texto comercial del botón de envío, sin alterar su comportamiento.",
-    "El bloqueo laboral de carreras sigue funcionando en cliente y servidor.",
-    "Los precios de inglés y carreras no se mezclan.",
-    "Las cifras del mentor conservan su significado original.",
-    "No hay afirmaciones de empleo o ingresos garantizados.",
-    "Las páginas siguen indicando que la apertura está en evaluación.",
-    "El contenido funciona visualmente en móvil y escritorio.",
-    "No se rompieron integraciones ni eventos de conversión."
-  ],
-  "delivery": {
-    "instruction": "Implementá el nuevo copy y los ajustes visuales necesarios. Ejecutá las comprobaciones disponibles y entregá un resumen breve de los cambios y cualquier pendiente real."
   }
 }

@@ -1801,3 +1801,227 @@ html {
     font-size: 24px;
   }
 }
+
+.sales-header,
+.sales-landing {
+  --bg: #101d32;
+  --text: #fffdf7;
+  --muted: #c8d1df;
+  --border: #435269;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.sales-header .brand-lockup {
+  gap: 12px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+.sales-header .brand-logo {
+  width: 64px;
+  height: 64px;
+}
+.sales-header .brand-name {
+  font-size: 17px;
+  font-weight: 800;
+}
+.sales-header .brand-name small {
+  display: block;
+  color: var(--gold);
+  margin-top: 4px;
+}
+.sales-header .nav {
+  height: 84px;
+}
+.sales-landing .section {
+  padding-block: clamp(48px, 7vw, 88px);
+}
+.sales-landing .program-hero {
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 64px);
+  min-height: auto;
+  padding-block: clamp(38px, 6vw, 86px);
+}
+.sales-landing .program-hero h1 {
+  font-size: clamp(36px, 4.15vw, 63px);
+}
+.sales-landing .hero-description {
+  font-size: clamp(15px, 1.5vw, 18px);
+  max-width: 55ch;
+  margin-bottom: 0;
+}
+.sales-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 24px;
+}
+.sales-landing .text-link {
+  margin-top: 0;
+}
+.sales-landing .sales-offer-link {
+  margin-top: 12px;
+}
+.sales-hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 44px 8px 8px;
+}
+.careers-hero .sales-hero-photo img {
+  border-radius: 8px 8px 44px;
+}
+.sales-hero-photo figcaption {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.sales-cream,
+.sales-offer {
+  --text: #14243b;
+  --muted: #3f4c60;
+  --gold: #805900;
+  --border: #d9cfbb;
+  color-scheme: light;
+  background: #f7f1e5;
+  color: var(--text);
+}
+.sales-landing .mentor-section {
+  border-top: 0;
+  gap: clamp(26px, 5vw, 70px);
+}
+.sales-landing .mentor-record {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.mentor-record > div {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  padding: 15px;
+  border-top: 2px solid #bb9140;
+  background: #fffdf7;
+}
+.mentor-record dd {
+  color: #694800;
+  margin: 0 0 6px;
+  font:
+    800 clamp(19px, 2.1vw, 28px)/1.15 Manrope,
+    sans-serif;
+}
+.mentor-portrait,
+.sales-video {
+  display: block;
+  width: min(100%, 640px);
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.sales-offer {
+  background: #efce7c;
+}
+.sales-offer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 28px clamp(30px, 7vw, 105px);
+}
+.sales-offer h2 + p {
+  max-width: 45ch;
+  margin-top: 14px;
+}
+.sales-price {
+  background: #fffaf0;
+  border-radius: 16px;
+  padding: clamp(20px, 3vw, 36px);
+}
+.sales-price strong {
+  color: #14243b;
+  font:
+    800 clamp(36px, 5vw, 62px)/1.05 Manrope,
+    sans-serif;
+  letter-spacing: -0.055em;
+}
+.sales-price .button {
+  margin-top: 18px;
+}
+.sales-landing .button {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.4;
+}
+.sales-landing .button svg {
+  flex-shrink: 0;
+}
+.sales-result {
+  background: #fffdf7;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: clamp(20px, 3vw, 32px);
+}
+.sales-result h3 {
+  font-size: clamp(24px, 2.5vw, 33px);
+  margin: 10px 0 12px;
+}
+.sales-landing .faq details {
+  border-color: var(--border);
+}
+.sales-landing .faq summary,
+.sales-landing .faq details p {
+  color: var(--text);
+}
+.sales-landing .faq .text-link {
+  text-decoration: underline;
+}
+.sales-landing .form-section {
+  background: #15253e;
+}
+.sales-form-panel {
+  min-width: 0;
+}
+.sales-form-note {
+  background: #f9edcf;
+  color: #332603;
+  border-left: 4px solid var(--gold);
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+.sales-landing .form-intro .button {
+  margin-top: 16px;
+}
+
+@media (max-width: 800px) {
+  .sales-header nav {
+    top: 84px;
+  }
+  .sales-landing .program-hero,
+  .sales-offer-grid {
+    grid-template-columns: 1fr;
+  }
+  .sales-hero-photo img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center 42%;
+  }
+}
+@media (max-width: 480px) {
+  .sales-header .brand-logo {
+    width: 52px;
+    height: 52px;
+  }
+  .sales-header .brand-name {
+    font-size: 15px;
+  }
+  .sales-header .nav-cta {
+    display: none;
+  }
+  .sales-landing .program-hero h1 {
+    font-size: clamp(32px, 9vw, 42px);
+  }
+  .sales-landing .program-hero .button {
+    font-size: 13px;
+  }
+  .sales-landing .mentor-record {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1812,27 +1812,6 @@ html {
   color: var(--text);
 }
 
-.sales-header .brand-lockup {
-  gap: 12px;
-  line-height: 1.1;
-  letter-spacing: 0;
-}
-.sales-header .brand-logo {
-  width: 64px;
-  height: 64px;
-}
-.sales-header .brand-name {
-  font-size: 17px;
-  font-weight: 800;
-}
-.sales-header .brand-name small {
-  display: block;
-  color: var(--gold);
-  margin-top: 4px;
-}
-.sales-header .nav {
-  height: 84px;
-}
 .sales-landing .section {
   padding-block: clamp(48px, 7vw, 88px);
 }
@@ -2005,16 +1984,6 @@ html {
   }
 }
 @media (max-width: 480px) {
-  .sales-header .brand-logo {
-    width: 52px;
-    height: 52px;
-  }
-  .sales-header .brand-name {
-    font-size: 15px;
-  }
-  .sales-header .nav-cta {
-    display: none;
-  }
   .sales-landing .program-hero h1 {
     font-size: clamp(32px, 9vw, 42px);
   }
@@ -2104,11 +2073,8 @@ html {
   justify-self: end;
 }
 .sales-header .brand-logo {
-  width: 92px;
-  height: 92px;
-}
-.sales-header .brand-name {
-  font-size: 21px;
+  width: 260px;
+  height: auto;
 }
 .sales-regular-price {
   margin-bottom: 8px;
@@ -2180,11 +2146,7 @@ html {
     display: none;
   }
   .sales-header .brand-logo {
-    width: 76px;
-    height: 76px;
-  }
-  .sales-header .brand-name {
-    font-size: 17px;
+    width: clamp(175px, 54vw, 230px);
   }
 }
 @media (max-width: 560px) {
@@ -2197,9 +2159,6 @@ html {
     max-width: 170px;
   }
   .offer-banner > a {
-    white-space: nowrap;
-  }
-  .sales-header .brand-name {
     white-space: nowrap;
   }
   .sales-header .nav {

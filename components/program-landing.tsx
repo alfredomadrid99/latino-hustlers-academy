@@ -12,16 +12,15 @@ export function Brand({ lockup = false }: { lockup?: boolean }) {
     >
       <img
         className="brand-logo"
-        src="/images/latino-hustlers-logo.png"
-        alt={lockup ? "" : "Latino Hustlers Academy"}
-        width={1254}
-        height={1254}
+        src={
+          lockup
+            ? "/images/latino-hustlers-wide.jpeg"
+            : "/images/latino-hustlers-logo.png"
+        }
+        alt="Latino Hustlers Academy"
+        width={lockup ? 1280 : 1254}
+        height={lockup ? 511 : 1254}
       />
-      {lockup && (
-        <span className="brand-name">
-          Latino Hustlers<small>Academy</small>
-        </span>
-      )}
     </Link>
   );
 }

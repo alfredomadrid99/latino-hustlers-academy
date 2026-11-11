@@ -1,14 +1,30 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 const spec = JSON.parse(fs.readFileSync("lib/programs.json", "utf8"));
-const base = "http://127.0.0.1:5173";
+const base = process.argv[2] ?? "http://127.0.0.1:3000";
+
+for (const path of ["/ingles", "/carreras-remotas"]) {
+  const response = await fetch(`${base}${path}`, { redirect: "error" });
+  assert.equal(response.status, 200);
+  assert.match(await response.text(), /<form\b/);
+  console.log(`PASS ${path}: acceso directo al formulario`);
+}
+
 async function send(data, id = crypto.randomUUID()) {
   const r = await fetch(`${base}/api/leads`, {
     method: "POST",
-    headers: { "Content-Type": "application/json", "Idempotency-Key": id },
+    headers: {
+      "Content-Type": "application/json",
+      "Idempotency-Key": id,
+      Origin: new URL(base).origin,
+    },
     body: JSON.stringify(data),
   });
-  return { status: r.status, body: await r.json() };
+  return {
+    status: r.status,
+    body: await r.json(),
+    cacheControl: r.headers.get("cache-control"),
+  };
 }
 for (const program of ["english", "remote_careers"]) {
   const f = program === "english" ? spec.forms.english : spec.forms.careers;
@@ -36,14 +52,14 @@ for (const program of ["english", "remote_careers"]) {
   data.virtual_comfort = f.fields.find(
     (x) => x.id === "virtual_comfort",
   ).options[2];
-  const id = crypto.randomUUID();
-  let r = await send(data, id);
-  assert.equal(r.status, 201, JSON.stringify(r));
-  assert.equal(r.body.saved, true);
-  r = await send(data, id);
-  assert.equal(r.status, 200);
+  let r = await send(data);
+  assert.equal(r.status, 503, JSON.stringify(r));
+  assert.equal(r.cacheControl, "no-store");
+  assert.deepEqual(r.body, {
+    error: "El registro no está disponible en este momento. Intentá más tarde.",
+  });
   console.log(
-    `PASS ${program}: cero inglés, presupuesto bajo, modalidad presencial, guardado e idempotencia`,
+    `PASS ${program}: registro temporalmente no disponible para un envío válido`,
   );
   for (const patch of [
     { english_level: "inventado" },
@@ -72,6 +88,3 @@ for (const program of ["english", "remote_careers"]) {
     }
   console.log(`PASS ${program}: validación estricta y reglas específicas`);
 }
-console.log(
-  "Ambos programas guardan independientemente el mismo contacto. Solo datos ficticios locales.",
-);

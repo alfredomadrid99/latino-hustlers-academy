@@ -94,6 +94,10 @@ export function LeadForm({ program }: { program: Program }) {
           website: data.website || "",
         }),
       });
+      if (response.status === 503) {
+        setFailure("El registro no está disponible en este momento. Intentá más tarde.");
+        return;
+      }
       const result = (await response.json()) as { saved?: boolean };
       if (!response.ok || result.saved !== true)
         throw new Error(

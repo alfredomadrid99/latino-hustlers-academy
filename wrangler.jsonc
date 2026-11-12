@@ -1,0 +1,34 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "latino-hustlers-academy",
+  "compatibility_date": "2026-11-10",
+  "compatibility_flags": [
+    "global_fetch_strictly_public",
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+  {
+    "binding": "DB",
+    "database_name": "latino-hustlers-leads",
+    "database_id": "c35a3248-b4c1-4974-a819-9467412e6f51",
+    "migrations_dir": "drizzle"
+  }
+],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "latino-hustlers-academy"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

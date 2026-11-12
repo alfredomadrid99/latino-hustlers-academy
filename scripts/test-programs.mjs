@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 const spec = JSON.parse(fs.readFileSync("lib/programs.json", "utf8"));
-const base = process.argv[2] ?? "http://127.0.0.1:3000";
+const base = process.argv[2] ?? "http://localhost:8787";
 
 for (const path of ["/ingles", "/carreras-remotas"]) {
   const response = await fetch(`${base}${path}`, { redirect: "error" });
@@ -52,14 +52,18 @@ for (const program of ["english", "remote_careers"]) {
   data.virtual_comfort = f.fields.find(
     (x) => x.id === "virtual_comfort",
   ).options[2];
-  let r = await send(data);
-  assert.equal(r.status, 503, JSON.stringify(r));
+  const id = crypto.randomUUID();
+  let r = await send(data, id);
+  assert.equal(r.status, 201, JSON.stringify(r));
   assert.equal(r.cacheControl, "no-store");
-  assert.deepEqual(r.body, {
-    error: "El registro no está disponible en este momento. Intentá más tarde.",
-  });
+  assert.deepEqual(r.body, { saved: true });
+  r = await send(data, id);
+  assert.equal(r.status, 200);
+  assert.deepEqual(r.body, { saved: true });
+  r = await send({ ...data, email: "other@example.invalid" }, id);
+  assert.equal(r.status, 409);
   console.log(
-    `PASS ${program}: registro temporalmente no disponible para un envío válido`,
+    `PASS ${program}: guardado, reintento y conflicto de idempotencia`,
   );
   for (const patch of [
     { english_level: "inventado" },

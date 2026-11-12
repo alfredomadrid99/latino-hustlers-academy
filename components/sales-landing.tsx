@@ -166,22 +166,32 @@ export function SalesLanding({
               src={
                 english
                   ? "/images/hero-ingles.webp"
-                  : "/images/hero-carreras.webp"
+                  : "/images/hero-carreras-playa.webp"
               }
               alt={
                 english
                   ? "Persona practicando inglés en una videollamada"
-                  : "Un trabajador estresado en un call center y una profesional relajada trabajando desde su casa en Costa Rica"
+                  : "Un trabajador en un call center y una profesional con su laptop frente al mar en Costa Rica"
               }
               width={1120}
               height={840}
               fetchPriority="high"
             />
-            <figcaption>
-              {english
-                ? "Imagen ilustrativa"
-                : "Vos en un trabajo mal pagado vs. vos en un trabajo remoto"}
-            </figcaption>
+            {english ? (
+              <figcaption>Imagen ilustrativa</figcaption>
+            ) : (
+              <figcaption className="careers-photo-caption">
+                <span className="careers-photo-label">
+                  <BriefcaseBusiness aria-hidden="true" size={18} />
+                  <span>Vos en un trabajo mal pagado</span>
+                </span>
+                <span className="careers-photo-versus">vs.</span>
+                <span className="careers-photo-label careers-photo-label-remote">
+                  <Globe2 aria-hidden="true" size={18} />
+                  <span>Vos trabajando desde donde querás</span>
+                </span>
+              </figcaption>
+            )}
           </figure>
         </section>
 

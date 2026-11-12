@@ -177,7 +177,11 @@ export function SalesLanding({
               height={840}
               fetchPriority="high"
             />
-            <figcaption>Imagen ilustrativa</figcaption>
+            <figcaption>
+              {english
+                ? "Imagen ilustrativa"
+                : "Vos en un trabajo mal pagado vs. vos en un trabajo remoto"}
+            </figcaption>
           </figure>
         </section>
 
